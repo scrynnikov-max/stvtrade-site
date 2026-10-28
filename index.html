@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STVTRADE — монтаж и обслуживание видеонаблюдения на Юге России</title>
+<meta name="description" content="STVTRADE: монтаж, техническое обслуживание и ремонт систем видеонаблюдения для бизнеса в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее. Trassir, Hikvision, HiWatch, Dahua. Приём заявок 24/7.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%2710%27 fill=%27%230b63ce%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2711%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272.6%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%275.2%27 fill=%27white%27/%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#14181f;--muted:#5b6472;--line:#e3e6eb;--accent:#0b63ce;--accent-ink:#fff;--soft:#e8f0fb}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1216;--card:#171b21;--ink:#e9edf2;--muted:#9aa4b2;--line:#262c35;--accent:#4c95ee;--accent-ink:#0b0e12;--soft:#16243a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
+.brand{display:flex;flex-direction:column;line-height:1.05}
+.brand b{font-size:19px;letter-spacing:1.5px}
+.brand small{color:var(--muted);font-size:12px}
+.top a.call{background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:600;white-space:nowrap;font-size:15px}
+.wrap.hero{padding-top:56px;padding-bottom:36px}
+.herogrid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
+.hero h1{font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:0 0 16px}
+.hero p.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);margin:0 0 26px}
+.ph{background:var(--soft);border-radius:18px;overflow:hidden;aspect-ratio:16/10}
+.ph img{width:100%;height:100%;object-fit:cover}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:600}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.btn.s{border:1px solid var(--line);color:var(--ink);background:var(--card)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fact b{display:block;font-size:24px;line-height:1.15}
+.fact span{color:var(--muted);font-size:14px}
+section{padding:40px 0}
+h2{font-size:clamp(23px,3vw,30px);margin:0 0 22px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.svc .ph{border-radius:0;aspect-ratio:16/8}
+.svc .txt{padding:20px 22px 22px}
+.svc h3{margin:0 0 8px;font-size:19px}
+.svc p{margin:0;color:var(--muted)}
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.who div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--soft);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.regions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card b{display:block;margin-bottom:4px}
+.card span,.card p{color:var(--muted);font-size:15px;margin:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;counter-increment:s}
+.step:before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:10px}
+.step b{display:block;margin-bottom:4px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.split .ph{aspect-ratio:auto;min-height:220px}
+.req{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;font-size:15px}
+.req div:nth-child(odd){color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact a{font-weight:700;font-size:18px;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px}
+@media (max-width:860px){.herogrid,.split{grid-template-columns:1fr}.facts,.steps{grid-template-columns:repeat(2,1fr)}.services,.contact{grid-template-columns:1fr}.regions,.who{grid-template-columns:repeat(2,1fr)}.req{grid-template-columns:1fr}.req div:nth-child(odd){margin-top:8px}.wrap.hero{padding-top:28px}}
+@media (max-width:480px){.wrap{padding:0 16px}.regions,.who{grid-template-columns:1fr}.top a.call{padding:8px 10px;font-size:14px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#">
+    <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--accent)"/><circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="20" cy="20" r="5.2" fill="#fff"/><circle cx="22" cy="18" r="1.6" fill="var(--accent)"/><path d="M29.5 9.5l3-3" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
+    <span class="brand"><b>STVTRADE</b><small>системы видеонаблюдения</small></span>
+  </a>
+  <a class="call" href="tel:+79186499694">+7 918 649-96-94</a>
+</div></header>
+
+<main>
+<div class="wrap hero"><div class="herogrid">
+  <div>
+    <h1>Монтаж, обслуживание и ремонт видеонаблюдения</h1>
+    <p class="lead">Установим систему под ваш объект, будем обслуживать её по графику и быстро приедем, если что-то сломалось. Работаем с бизнесом по Краснодарскому краю, Ростовской области, Ставропольскому краю и Адыгее.</p>
+    <div class="btns">
+      <a class="btn p" href="#contacts">Оставить заявку</a>
+      <a class="btn s" href="#services">Услуги</a>
+    </div>
+  </div>
+  <div class="ph"><img src="img/hero.jpg" alt="Инженер настраивает камеру видеонаблюдения" onerror="this.remove()"></div>
+</div>
+<div class="facts">
+  <div class="fact"><b>10 лет</b><span>опыта в видеонаблюдении</span></div>
+  <div class="fact"><b>24/7</b><span>приём заявок</span></div>
+  <div class="fact"><b>4 региона</b><span>Юга России</span></div>
+  <div class="fact"><b>12 месяцев</b><span>гарантия на работы</span></div>
+</div>
+</div>
+
+<section id="services"><div class="wrap">
+  <h2>Услуги</h2>
+  <div class="services">
+    <div class="svc"><div class="ph"><img src="img/montazh.jpg" alt="Монтаж уличной камеры" onerror="this.remove()"></div><div class="txt"><h3>Монтаж и модернизация</h3><p>Подбор оборудования, прокладка линий, установка камер, регистраторов и серверов, пусконаладка. Расширение и замена устаревших систем.</p></div></div>
+    <div class="svc"><div class="ph"><img src="img/to.jpg" alt="Техническое обслуживание камеры" onerror="this.remove()"></div><div class="txt"><h3>Техническое обслуживание</h3><p>Регламентные работы по графику: чистка и настройка камер, проверка записи и архива, обновление ПО, диагностика питания и кабельных линий.</p></div></div>
+    <div class="svc"><div class="ph"><img src="img/remont.jpg" alt="Ремонт видеорегистратора" onerror="this.remove()"></div><div class="txt"><h3>Ремонт и аварийный выезд</h3><p>Диагностика и восстановление системы, замена неисправного оборудования. Если ремонт требует времени — ставим подменное оборудование.</p></div></div>
+    <div class="svc"><div class="ph"><img src="img/udalenno.jpg" alt="Удалённый мониторинг видеонаблюдения" onerror="this.remove()"></div><div class="txt"><h3>Удалённая поддержка</h3><p>Настройка и диагностика без выезда: настройка записи и архива, подключение камер, потерявших связь с регистратором, восстановление удалённого доступа, устранение программных сбоев, консультации.</p></div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Для кого работаем</h2>
+  <div class="who"><div>Магазины и торговые сети</div><div>Офисы и бизнес-центры</div><div>Склады и производства</div><div>Кафе и рестораны</div><div>Управляющие компании и ТСЖ</div><div>Автосервисы и АЗС</div></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Оборудование</h2>
+  <div class="tags"><span class="tag">Trassir</span><span class="tag">Hikvision</span><span class="tag">HiWatch</span><span class="tag">Dahua</span><span class="tag">IP и аналоговые камеры</span><span class="tag">Видеорегистраторы и серверы</span><span class="tag">Коммутаторы и ИБП</span></div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Как мы работаем</h2>
+  <div class="steps">
+    <div class="step"><b>Заявка</b><p>По телефону или почте. Приём заявок круглосуточно.</p></div>
+    <div class="step"><b>Диагностика</b><p>Удалённо, если это возможно, или с выездом на объект.</p></div>
+    <div class="step"><b>Работы</b><p>Ремонт, замена или подменное оборудование, согласованные заранее.</p></div>
+    <div class="step"><b>Гарантия</b><p>Акт выполненных работ и гарантия 12 месяцев.</p></div>
+  </div>
+</div></section>
+
+<section id="geo"><div class="wrap">
+  <h2>География</h2>
+    <div class="regions">
+      <div class="card"><b>Краснодарский край</b><span>Краснодар, Сочи, Новороссийск, Анапа и края</span></div>
+      <div class="card"><b>Ростовская область</b><span>Ростов-на-Дону, Таганрог, Шахты и области</span></div>
+      <div class="card"><b>Ставропольский край</b><span>Ставрополь, Кавказские Минеральные Воды</span></div>
+      <div class="card"><b>Республика Адыгея</b><span>Майкоп и республика</span></div>
+    </div>
+</div></section>
+
+<section id="contacts"><div class="wrap">
+  <h2>Контакты</h2>
+  <div class="contact">
+    <div class="card"><p>Максим</p><a href="tel:+79186499694">+7 918 649-96-94</a></div>
+    <div class="card"><p>Евгений</p><a href="tel:+79286532486">+7 928 653-24-86</a></div>
+    <div class="card"><p>E-mail</p><a href="mailto:stvtrade@mail.ru">stvtrade@mail.ru</a></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Реквизиты</h2>
+  <div class="card req">
+    <div>Компания</div><div>STVTRADE</div>
+    <div>Исполнитель</div><div>ИП Скрынникова Татьяна Владимировна</div>
+    <div>ИНН</div><div>072197944450</div>
+    <div>ОГРНИП</div><div>316237500066465</div>
+    <div>Документооборот</div><div>ЭДО (Контур.Диадок)</div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© 2026 STVTRADE · ИП Скрынникова Т.В. · stvtrade.ru</div></footer>
+</body>
+</html>

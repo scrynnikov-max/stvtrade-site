@@ -1,1 +1,5 @@
-# stvtrade-site
+# STVTRADE
+
+Сайт-визитка STVTRADE — монтаж, обслуживание и ремонт систем видеонаблюдения на Юге России.
+
+https://stvtrade.ru
