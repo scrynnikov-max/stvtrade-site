@@ -3,160 +3,352 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>STVTRADE — монтаж и обслуживание видеонаблюдения на Юге России</title>
-<meta name="description" content="STVTRADE: монтаж, техническое обслуживание и ремонт систем видеонаблюдения для бизнеса в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее. Trassir, Hikvision, HiWatch, Dahua. Приём заявок 24/7.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%2710%27 fill=%27%230b63ce%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2711%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272.6%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%275.2%27 fill=%27white%27/%3E%3C/svg%3E">
+<title>STVTRADE — видеонаблюдение и домофоны на Юге России</title>
+<meta name="description" content="Монтаж и обслуживание видеонаблюдения, видеодомофонов и сетей в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее. Trassir, Dahua, Hikvision, HiWatch. Заявки 24/7.">
+<meta property="og:title" content="STVTRADE — видеонаблюдение и домофоны на Юге России">
+<meta property="og:description" content="Монтаж, обслуживание и ремонт систем видеонаблюдения. Заявки 24/7, гарантия 12 месяцев.">
+<meta property="og:image" content="https://stvtrade.ru/img/works/w10.jpg">
+<meta name="theme-color" content="#18222D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%2318222D%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2710.5%27 fill=%27none%27 stroke=%27%23F2B705%27 stroke-width=%273%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%274.5%27 fill=%27%23F2B705%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#14181f;--muted:#5b6472;--line:#e3e6eb;--accent:#0b63ce;--accent-ink:#fff;--soft:#e8f0fb}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1216;--card:#171b21;--ink:#e9edf2;--muted:#9aa4b2;--line:#262c35;--accent:#4c95ee;--accent-ink:#0b0e12;--soft:#16243a}}
+:root{
+  --paper:#F4F5F2;
+  --paper-2:#E9EBE6;
+  --ink:#18222D;
+  --ink-2:#4A5663;
+  --line:#D3D7D0;
+  --signal:#F2B705;
+  --signal-ink:#18222D;
+  --nvr:#18222D;
+  --nvr-2:#22303D;
+  --nvr-line:#33424F;
+  --nvr-text:#E4E8EC;
+  --nvr-muted:#93A1AE;
+  --rec:#E5484D;
+  --display:"Unbounded",system-ui,sans-serif;
+  --text:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --osd:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --wrap:1200px;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-a{color:var(--accent)}
-img{max-width:100%;display:block}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header.top{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
-.logo{text-decoration:none;color:var(--ink);display:flex;align-items:center;gap:10px}
-.brand{display:flex;flex-direction:column;line-height:1.05}
-.brand b{font-size:19px;letter-spacing:1.5px}
-.brand small{color:var(--muted);font-size:12px}
-.top a.call{background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:9px 14px;border-radius:10px;font-weight:600;white-space:nowrap;font-size:15px}
-.wrap.hero{padding-top:56px;padding-bottom:36px}
-.herogrid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center}
-.hero h1{font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:0 0 16px}
-.hero p.lead{font-size:clamp(17px,2vw,19px);color:var(--muted);margin:0 0 26px}
-.ph{background:var(--soft);border-radius:18px;overflow:hidden;aspect-ratio:16/10}
-.ph img{width:100%;height:100%;object-fit:cover}
-.btns{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-block;padding:13px 20px;border-radius:12px;text-decoration:none;font-weight:600}
-.btn.p{background:var(--accent);color:var(--accent-ink)}
-.btn.s{border:1px solid var(--line);color:var(--ink);background:var(--card)}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px}
-.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
-.fact b{display:block;font-size:24px;line-height:1.15}
-.fact span{color:var(--muted);font-size:14px}
-section{padding:40px 0}
-h2{font-size:clamp(23px,3vw,30px);margin:0 0 22px}
-.services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.svc .ph{border-radius:0;aspect-ratio:16/8}
-.svc .txt{padding:20px 22px 22px}
-.svc h3{margin:0 0 8px;font-size:19px}
-.svc p{margin:0;color:var(--muted)}
-.who{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.who div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:600}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:var(--soft);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
-.regions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
-.card b{display:block;margin-bottom:4px}
-.card span,.card p{color:var(--muted);font-size:15px;margin:0}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;counter-reset:s}
-.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;counter-increment:s}
-.step:before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;margin-bottom:10px}
-.step b{display:block;margin-bottom:4px}
-.step p{margin:0;color:var(--muted);font-size:15px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
-.split .ph{aspect-ratio:auto;min-height:220px}
-.req{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;font-size:15px}
-.req div:nth-child(odd){color:var(--muted)}
-.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.contact a{font-weight:700;font-size:18px;text-decoration:none}
-footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:14px}
-@media (max-width:860px){.herogrid,.split{grid-template-columns:1fr}.facts,.steps{grid-template-columns:repeat(2,1fr)}.services,.contact{grid-template-columns:1fr}.regions,.who{grid-template-columns:repeat(2,1fr)}.req{grid-template-columns:1fr}.req div:nth-child(odd){margin-top:8px}.wrap.hero{padding-top:28px}}
-@media (max-width:480px){.wrap{padding:0 16px}.regions,.who{grid-template-columns:1fr}.top a.call{padding:8px 10px;font-size:14px}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(30px,4.2vw,52px);line-height:1.05}
+.lead{color:var(--ink-2);font-size:clamp(17px,1.6vw,19px);max-width:60ch}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:.06em}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{text-decoration:none;color:var(--ink-2);font-weight:500;font-size:15px}
+.nav a:hover{color:var(--ink)}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-size:15px;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.call:hover{background:#0F171F}
+
+/* hero */
+.hero{padding:64px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(36px,5.4vw,72px);line-height:1.02}
+.hero .lead{margin:24px 0 32px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;border-radius:14px;font-weight:600;text-decoration:none;font-size:16px}
+.btn-signal{background:var(--signal);color:var(--signal-ink)}
+.btn-signal:hover{background:#FFC61A}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.facts{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:0;margin:44px 0 0;padding:0;list-style:none}
+.facts li{padding:0 24px;border-left:1px solid var(--line)}
+.facts li:first-child{padding-left:0;border-left:0}
+.facts b{display:block;font-family:var(--display);font-size:22px;line-height:1.2}
+.facts span{color:var(--ink-2);font-size:14px}
+
+/* viewfinder */
+.feed{position:relative;border-radius:22px;overflow:hidden;background:var(--nvr);aspect-ratio:3/4;box-shadow:0 30px 60px -30px rgba(24,34,45,.55)}
+.feed img{width:100%;height:100%;object-fit:cover}
+.osd{position:absolute;font:500 13px/1 var(--osd);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);letter-spacing:.02em}
+.osd.tl{top:18px;left:20px}
+.osd.tr{top:18px;right:20px;display:flex;align-items:center;gap:8px}
+.osd.bl{bottom:18px;left:20px}
+.osd.br{bottom:18px;right:20px}
+.rec{width:10px;height:10px;border-radius:50%;background:var(--rec);animation:blink 1.6s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.corner{position:absolute;width:34px;height:34px;border:2px solid rgba(255,255,255,.85)}
+.c1{top:44px;left:20px;border-right:0;border-bottom:0}
+.c2{top:44px;right:20px;border-left:0;border-bottom:0}
+.c3{bottom:44px;left:20px;border-right:0;border-top:0}
+.c4{bottom:44px;right:20px;border-left:0;border-top:0}
+
+/* services */
+.section{padding:96px 0}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
+.head .lead{margin:0}
+.svc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.svc li{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:28px 0;border-top:1px solid var(--line)}
+.svc svg{width:44px;height:44px;color:var(--ink)}
+.svc h3{font-size:20px;line-height:1.25;margin-bottom:8px}
+.svc p{margin:0;color:var(--ink-2)}
+
+/* works / nvr */
+.nvr{background:var(--nvr);color:var(--nvr-text);padding:96px 0}
+.nvr .lead{color:var(--nvr-muted)}
+.nvr-bar{display:flex;justify-content:space-between;align-items:center;font:500 13px/1 var(--osd);color:var(--nvr-muted);padding:12px 4px;border-bottom:1px solid var(--nvr-line);margin-bottom:12px}
+.nvr-bar .live{display:flex;align-items:center;gap:8px;color:var(--nvr-text)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.tile{position:relative;margin:0;padding:0;border:0;background:var(--nvr-2);border-radius:6px;overflow:hidden;cursor:zoom-in;aspect-ratio:3/4;color:inherit;font:inherit;text-align:left}
+.tile.wide{grid-column:span 2;aspect-ratio:auto}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.035)}
+.tile .ch{position:absolute;top:10px;left:12px;font:500 12px/1 var(--osd);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.7)}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 12px;background:linear-gradient(transparent,rgba(12,18,24,.85));font-size:14px;line-height:1.35;color:#fff}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:20px;border-top:3px solid var(--ink)}
+.steps li::before{content:counter(s);display:block;font-family:var(--display);font-size:44px;line-height:1;color:var(--signal);-webkit-text-stroke:1.5px var(--ink);margin-bottom:18px}
+.steps h3{font-size:19px;margin-bottom:8px}
+.steps p{margin:0;color:var(--ink-2)}
+
+/* geo + brands */
+.band{background:var(--paper-2)}
+.geo{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.geo b{display:block;font-family:var(--display);font-size:20px;line-height:1.2;margin-bottom:10px}
+.geo span{color:var(--ink-2)}
+.brands{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:64px;padding-top:32px;border-top:1px solid var(--line);font-family:var(--display);font-weight:500;font-size:clamp(20px,2.4vw,28px);color:var(--ink-2)}
+
+/* contacts */
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.phones{display:grid;gap:22px}
+.phones a{display:block;text-decoration:none;font-family:var(--display);font-weight:700;font-size:clamp(26px,3.4vw,42px);line-height:1.1}
+.phones a:hover{color:#5A6672}
+.phones small{display:block;color:var(--ink-2);font-size:15px;margin-bottom:4px}
+.foot{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--ink-2);font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh;margin:0}
+dialog.lb::backdrop{background:rgba(10,15,20,.94)}
+.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:56px 72px}
+.lb-in img{max-width:100%;max-height:calc(100vh - 150px);border-radius:6px;object-fit:contain}
+.lb-cap{position:absolute;left:0;right:0;bottom:20px;text-align:center;color:#fff;font-size:15px}
+.lb-cap span{font:500 13px/1 var(--osd);color:var(--signal);margin-right:10px}
+.lb-btn{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;width:52px;height:52px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(255,255,255,.2)}
+.lb-x{top:16px;right:16px}
+.lb-prev{left:12px;top:50%;translate:0 -50%}
+.lb-next{right:12px;top:50%;translate:0 -50%}
+
+@media (max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .feed{aspect-ratio:4/5;max-height:640px}
+  .facts{grid-template-columns:repeat(2,auto);row-gap:20px}
+  .facts li:nth-child(3){padding-left:0;border-left:0}
+  .head{grid-template-columns:1fr;gap:16px}
+  .svc{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .tile.wide{aspect-ratio:3/2}
+  .steps,.geo{grid-template-columns:1fr 1fr}
+  .contact .wrap{grid-template-columns:1fr}
+  .nav{display:none}
+  .call{margin-left:auto}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .hero{padding:36px 0 40px}
+  .section,.nvr{padding:64px 0}
+  .steps,.geo{grid-template-columns:1fr}
+  .facts li{padding:0 14px}
+  .call .num{display:none}
+  .lb-in{padding:56px 8px 70px}
+  .lb-prev,.lb-next{top:auto;bottom:64px;translate:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rec{animation:none}
+  .tile img{transition:none}
+}
 </style>
 </head>
 <body>
+
 <header class="top"><div class="wrap">
-  <a class="logo" href="#">
-    <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="var(--accent)"/><circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="2.6"/><circle cx="20" cy="20" r="5.2" fill="#fff"/><circle cx="22" cy="18" r="1.6" fill="var(--accent)"/><path d="M29.5 9.5l3-3" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></svg>
-    <span class="brand"><b>STVTRADE</b><small>системы видеонаблюдения</small></span>
+  <a class="logo" href="#top" aria-label="STVTRADE, на главную">
+    <svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#18222D"/><circle cx="20" cy="20" r="10.5" fill="none" stroke="#F2B705" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#F2B705"/></svg>
+    STVTRADE
   </a>
-  <a class="call" href="tel:+79186499694">+7 918 649-96-94</a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#services">Услуги</a>
+    <a href="#works">Работы</a>
+    <a href="#process">Как работаем</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <a class="call" href="tel:+79186499694" aria-label="Позвонить: +7 918 649-96-94">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span class="num">+7 918 649-96-94</span>
+  </a>
 </div></header>
 
-<main>
-<div class="wrap hero"><div class="herogrid">
+<main id="top">
+<section class="hero"><div class="wrap">
   <div>
-    <h1>Монтаж, обслуживание и ремонт видеонаблюдения</h1>
-    <p class="lead">Установим систему под ваш объект, будем обслуживать её по графику и быстро приедем, если что-то сломалось. Работаем с бизнесом по Краснодарскому краю, Ростовской области, Ставропольскому краю и Адыгее.</p>
-    <div class="btns">
-      <a class="btn p" href="#contacts">Оставить заявку</a>
-      <a class="btn s" href="#services">Услуги</a>
+    <h1>Видеонаблюдение и&nbsp;домофоны на&nbsp;Юге России</h1>
+    <p class="lead">Монтируем и обслуживаем камеры, видеодомофоны и сети для бизнеса и частных домов. Свои инженеры в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее.</p>
+    <div class="cta">
+      <a class="btn btn-signal" href="tel:+79186499694">Позвонить: +7 918 649-96-94</a>
+      <a class="btn btn-ghost" href="#works">Посмотреть работы</a>
     </div>
+    <ul class="facts">
+      <li><b>10 лет</b><span>на объектах</span></li>
+      <li><b>24/7</b><span>приём заявок</span></li>
+      <li><b>12 мес.</b><span>гарантия на работы</span></li>
+      <li><b>4 региона</b><span>Юга России</span></li>
+    </ul>
   </div>
-  <div class="ph"><img src="img/hero.jpg" alt="Инженер настраивает камеру видеонаблюдения" onerror="this.remove()"></div>
-</div>
-<div class="facts">
-  <div class="fact"><b>10 лет</b><span>опыта в видеонаблюдении</span></div>
-  <div class="fact"><b>24/7</b><span>приём заявок</span></div>
-  <div class="fact"><b>4 региона</b><span>Юга России</span></div>
-  <div class="fact"><b>12 месяцев</b><span>гарантия на работы</span></div>
-</div>
-</div>
-
-<section id="services"><div class="wrap">
-  <h2>Услуги</h2>
-  <div class="services">
-    <div class="svc"><div class="ph"><img src="img/montazh.jpg" alt="Монтаж уличной камеры" onerror="this.remove()"></div><div class="txt"><h3>Монтаж и модернизация</h3><p>Подбор оборудования, прокладка линий, установка камер, регистраторов и серверов, пусконаладка. Расширение и замена устаревших систем.</p></div></div>
-    <div class="svc"><div class="ph"><img src="img/to.jpg" alt="Техническое обслуживание камеры" onerror="this.remove()"></div><div class="txt"><h3>Техническое обслуживание</h3><p>Регламентные работы по графику: чистка и настройка камер, проверка записи и архива, обновление ПО, диагностика питания и кабельных линий.</p></div></div>
-    <div class="svc"><div class="ph"><img src="img/remont.jpg" alt="Ремонт видеорегистратора" onerror="this.remove()"></div><div class="txt"><h3>Ремонт и аварийный выезд</h3><p>Диагностика и восстановление системы, замена неисправного оборудования. Если ремонт требует времени — ставим подменное оборудование.</p></div></div>
-    <div class="svc"><div class="ph"><img src="img/udalenno.jpg" alt="Удалённый мониторинг видеонаблюдения" onerror="this.remove()"></div><div class="txt"><h3>Удалённая поддержка</h3><p>Настройка и диагностика без выезда: настройка записи и архива, подключение камер, потерявших связь с регистратором, восстановление удалённого доступа, устранение программных сбоев, консультации.</p></div></div>
+  <div class="feed" aria-label="Две камеры на опоре, смонтированные STVTRADE">
+    <img src="img/works/w10.jpg" alt="Две уличные камеры и прожекторы на бетонной опоре" fetchpriority="high">
+    <span class="osd tl">CAM 01</span>
+    <span class="osd tr"><i class="rec" aria-hidden="true"></i>REC</span>
+    <span class="osd bl" id="clock">--.--.---- --:--:--</span>
+    <span class="osd br">STVTRADE</span>
+    <i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i>
   </div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>Для кого работаем</h2>
-  <div class="who"><div>Магазины и торговые сети</div><div>Офисы и бизнес-центры</div><div>Склады и производства</div><div>Кафе и рестораны</div><div>Управляющие компании и ТСЖ</div><div>Автосервисы и АЗС</div></div>
+<section class="section" id="services"><div class="wrap">
+  <div class="head">
+    <h2>Что делаем</h2>
+    <p class="lead">Берём объект целиком: подбираем оборудование, монтируем, настраиваем и дальше обслуживаем. Один подрядчик на всю систему.</p>
+  </div>
+  <ul class="svc">
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="14" width="24" height="13" rx="4"/><path d="M30 18l8-4v13l-8-4"/><path d="M14 27v8M8 35h12"/></svg>
+      <div><h3>Видеонаблюдение под ключ</h3><p>Подбор камер под задачу, прокладка линий, монтаж, настройка записи и просмотра с телефона.</p></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="13" y="5" width="18" height="34" rx="4"/><circle cx="22" cy="14" r="4"/><circle cx="22" cy="29" r="3"/></svg>
+      <div><h3>Видеодомофоны</h3><p>Вызывные панели и мониторы Dahua, HiWatch, EZVIZ. Открытие калитки и разговор с гостем со смартфона.</p></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="7" width="32" height="30" rx="3"/><path d="M11 15h22M11 22h22M11 29h22"/><circle cx="31" cy="15" r=".8" fill="currentColor"/><circle cx="31" cy="22" r=".8" fill="currentColor"/></svg>
+      <div><h3>Сети и шкафы</h3><p>Коммутаторы, регистраторы и питание в аккуратном шкафу. Кабели уложены и подписаны.</p></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 6v5M22 33v5M6 22h5M33 22h5"/><circle cx="22" cy="22" r="10"/><path d="M22 16v6l4 3"/></svg>
+      <div><h3>Техническое обслуживание</h3><p>Регламент по графику: чистка и настройка камер, проверка архива, обновление ПО, диагностика питания.</p></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M24 5L10 25h11l-2 14 14-20H22l2-14z"/></svg>
+      <div><h3>Ремонт и аварийный выезд</h3><p>Заявки принимаем круглосуточно. Если ремонт затягивается, ставим подменное оборудование.</p></div>
+    </li>
+    <li>
+      <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="8" width="34" height="22" rx="3"/><path d="M15 36h14M22 30v6"/><path d="M14 20l5 4 10-9"/></svg>
+      <div><h3>Удалённая поддержка</h3><p>Настройка, подключение камер, потерявших связь, восстановление удалённого доступа — без выезда.</p></div>
+    </li>
+  </ul>
 </div></section>
 
-<section><div class="wrap">
-  <h2>Оборудование</h2>
-  <div class="tags"><span class="tag">Trassir</span><span class="tag">Hikvision</span><span class="tag">HiWatch</span><span class="tag">Dahua</span><span class="tag">IP и аналоговые камеры</span><span class="tag">Видеорегистраторы и серверы</span><span class="tag">Коммутаторы и ИБП</span></div>
-</div></section>
-
-<section><div class="wrap">
-  <h2>Как мы работаем</h2>
-  <div class="steps">
-    <div class="step"><b>Заявка</b><p>По телефону или почте. Приём заявок круглосуточно.</p></div>
-    <div class="step"><b>Диагностика</b><p>Удалённо, если это возможно, или с выездом на объект.</p></div>
-    <div class="step"><b>Работы</b><p>Ремонт, замена или подменное оборудование, согласованные заранее.</p></div>
-    <div class="step"><b>Гарантия</b><p>Акт выполненных работ и гарантия 12 месяцев.</p></div>
+<section class="nvr" id="works"><div class="wrap">
+  <div class="head">
+    <h2>Наши работы</h2>
+    <p class="lead">Реальные объекты наших инженеров. Нажмите на кадр, чтобы открыть его крупно.</p>
+  </div>
+  <div class="nvr-bar" aria-hidden="true"><span class="live"><i class="rec"></i>10 каналов</span><span>STVTRADE NVR</span></div>
+  <div class="grid" id="grid">
+    <button class="tile" data-i="0"><img src="img/works/w10-s.jpg" alt="" loading="lazy"><span class="ch">CH 01</span><span class="cap">Две камеры и прожекторы на опоре, контроль въезда</span></button>
+    <button class="tile" data-i="1"><img src="img/works/w02-s.jpg" alt="" loading="lazy"><span class="ch">CH 02</span><span class="cap">Уличная камера HiWatch на монтажной коробке</span></button>
+    <button class="tile wide" data-i="2"><img src="img/works/w07-s.jpg" alt="" loading="lazy"><span class="ch">CH 03</span><span class="cap">Шкаф: коммутатор, регистратор, питание</span></button>
+    <button class="tile" data-i="3"><img src="img/works/w01-s.jpg" alt="" loading="lazy"><span class="ch">CH 04</span><span class="cap">Вызывная панель Dahua в фасаде</span></button>
+    <button class="tile" data-i="4"><img src="img/works/w06-s.jpg" alt="" loading="lazy"><span class="ch">CH 05</span><span class="cap">Монитор видеодомофона Dahua</span></button>
+    <button class="tile wide" data-i="5"><img src="img/works/w08-s.jpg" alt="" loading="lazy"><span class="ch">CH 06</span><span class="cap">Вызывная панель Dahua у ворот частного дома</span></button>
+    <button class="tile" data-i="6"><img src="img/works/w03-s.jpg" alt="" loading="lazy"><span class="ch">CH 07</span><span class="cap">Кабель спрятан в коробку, снаружи ничего не висит</span></button>
+    <button class="tile" data-i="7"><img src="img/works/w04-s.jpg" alt="" loading="lazy"><span class="ch">CH 08</span><span class="cap">Вызывная панель EZVIZ с козырьком</span></button>
+    <button class="tile" data-i="8"><img src="img/works/w05-s.jpg" alt="" loading="lazy"><span class="ch">CH 09</span><span class="cap">Вызывная панель HiWatch на калитке</span></button>
+    <button class="tile" data-i="9"><img src="img/works/w09-s.jpg" alt="" loading="lazy"><span class="ch">CH 10</span><span class="cap">Камера под карнизом частного дома</span></button>
   </div>
 </div></section>
 
-<section id="geo"><div class="wrap">
-  <h2>География</h2>
-    <div class="regions">
-      <div class="card"><b>Краснодарский край</b><span>Краснодар, Сочи, Новороссийск, Анапа — по всему краю</span></div>
-      <div class="card"><b>Ростовская область</b><span>Ростов-на-Дону, Таганрог, Шахты — по всей области</span></div>
-      <div class="card"><b>Ставропольский край</b><span>Ставрополь, Кавказские Минеральные Воды — по всему краю</span></div>
-      <div class="card"><b>Республика Адыгея</b><span>Майкоп — по всей республике</span></div>
-    </div>
-</div></section>
-
-<section id="contacts"><div class="wrap">
-  <h2>Контакты</h2>
-  <div class="contact">
-    <div class="card"><p>Максим</p><a href="tel:+79186499694">+7 918 649-96-94</a></div>
-    <div class="card"><p>Евгений</p><a href="tel:+79286532486">+7 928 653-24-86</a></div>
-    <div class="card"><p>E-mail</p><a href="mailto:stvtrade@mail.ru">stvtrade@mail.ru</a></div>
+<section class="section" id="process"><div class="wrap">
+  <div class="head">
+    <h2>Как работаем</h2>
+    <p class="lead">Цену называем до начала работ и не меняем её по ходу. Всё, что сделали, закрываем актом.</p>
   </div>
+  <ol class="steps">
+    <li><h3>Заявка</h3><p>Звоните или пишите на почту. Заявки принимаем круглосуточно.</p></li>
+    <li><h3>Выезд и расчёт</h3><p>Смотрим объект, подбираем оборудование и согласуем стоимость.</p></li>
+    <li><h3>Монтаж и настройка</h3><p>Ставим, настраиваем запись и доступ с телефона, показываем, как пользоваться.</p></li>
+    <li><h3>Гарантия и сервис</h3><p>12 месяцев гарантии на работы. Дальше — обслуживание по графику.</p></li>
+  </ol>
 </div></section>
 
-<section><div class="wrap">
-  <h2>Реквизиты</h2>
-  <div class="card req">
-    <div>Компания</div><div>STVTRADE</div>
-    <div>Исполнитель</div><div>ИП Скрынникова Татьяна Владимировна</div>
-    <div>ИНН</div><div>072197944450</div>
-    <div>ОГРНИП</div><div>316237500066465</div>
-    <div>Документооборот</div><div>ЭДО (Контур.Диадок)</div>
+<section class="section band" id="geo"><div class="wrap">
+  <div class="head">
+    <h2>Где работаем</h2>
+    <p class="lead">Инженеры живут в регионах, поэтому до объекта едем часы, а не дни.</p>
+  </div>
+  <ul class="geo">
+    <li><b>Краснодарский край</b><span>Краснодар, Сочи, Новороссийск, Анапа — по всему краю</span></li>
+    <li><b>Ростовская область</b><span>Ростов-на-Дону, Таганрог, Шахты — по всей области</span></li>
+    <li><b>Ставропольский край</b><span>Ставрополь и Кавказские Минеральные Воды — по всему краю</span></li>
+    <li><b>Республика Адыгея</b><span>Майкоп — по всей республике</span></li>
+  </ul>
+  <div class="brands" aria-label="Оборудование, с которым работаем"><span>Trassir</span><span>Dahua</span><span>Hikvision</span><span>HiWatch</span><span>EZVIZ</span></div>
+</div></section>
+
+<section class="section contact" id="contacts"><div class="wrap">
+  <div>
+    <h2>Расскажите, что нужно защитить</h2>
+    <p class="lead" style="margin-top:20px">Позвоните — приедем, посмотрим объект и посчитаем стоимость. Если система уже стоит и что-то не работает, тоже звоните.</p>
+  </div>
+  <div class="phones">
+    <a href="tel:+79186499694"><small>Максим</small>+7 918 649-96-94</a>
+    <a href="tel:+79286532486"><small>Евгений</small>+7 928 653-24-86</a>
+    <a href="mailto:stvtrade@mail.ru"><small>Почта</small>stvtrade@mail.ru</a>
   </div>
 </div></section>
 </main>
 
-<footer><div class="wrap">© 2026 STVTRADE · ИП Скрынникова Т.В. · stvtrade.ru</div></footer>
+<footer class="foot"><div class="wrap">
+  <span>© 2026 STVTRADE</span>
+  <span>ИП Скрынникова Татьяна Владимировна, ИНН 072197944450, ОГРНИП 316237500066465</span>
+</div></footer>
+
+<dialog class="lb" id="lb" aria-label="Фотография работы">
+  <div class="lb-in">
+    <img id="lbImg" alt="">
+    <p class="lb-cap"><span id="lbCh"></span><span id="lbCap" style="font:inherit;color:inherit;margin:0"></span></p>
+    <button class="lb-btn lb-x" id="lbX" aria-label="Закрыть"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <button class="lb-btn lb-prev" id="lbP" aria-label="Предыдущая"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="lb-btn lb-next" id="lbN" aria-label="Следующая"><svg width="22" height="22" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</dialog>
+
+<script>
+(function(){
+  var c=document.getElementById('clock');
+  var f=new Intl.DateTimeFormat('ru-RU',{timeZone:'Europe/Moscow',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false});
+  function t(){c.textContent=f.format(new Date()).replace(',','');}
+  t();setInterval(t,1000);
+
+  var tiles=[].slice.call(document.querySelectorAll('.tile'));
+  tiles.forEach(function(b){var cap=b.querySelector('.cap').textContent;b.setAttribute('aria-label','Открыть фото: '+cap);b.querySelector('img').alt=cap;});
+  var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),ch=document.getElementById('lbCh'),cur=0;
+  function show(i){cur=(i+tiles.length)%tiles.length;var t=tiles[cur];img.src=t.querySelector('img').src.replace('-s.jpg','.jpg');img.alt=t.querySelector('.cap').textContent;cap.textContent=img.alt;ch.textContent=t.querySelector('.ch').textContent;}
+  tiles.forEach(function(b,i){b.addEventListener('click',function(){show(i);if(lb.showModal)lb.showModal();else lb.setAttribute('open','');});});
+  document.getElementById('lbX').onclick=function(){lb.close();};
+  document.getElementById('lbP').onclick=function(){show(cur-1);};
+  document.getElementById('lbN').onclick=function(){show(cur+1);};
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-in'))lb.close();});
+  lb.addEventListener('close',function(){tiles[cur].focus();});
+  document.addEventListener('keydown',function(e){if(!lb.open)return;if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
 </body>
 </html>
