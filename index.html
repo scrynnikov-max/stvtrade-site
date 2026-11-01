@@ -233,17 +233,23 @@ p{margin:0}
 
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;color:#fff}
-dialog.lb::backdrop{background:rgba(6,12,17,.95)}
-.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:64px 84px 84px}
-.lb-in img{max-width:100%;max-height:calc(100vh - 160px);border-radius:8px;object-fit:contain}
+dialog.lb::backdrop{background:rgba(6,12,17,.97)}
+.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:64px 92px 92px;touch-action:none;overflow:hidden}
+.lb-in img{max-width:100%;max-height:calc(100vh - 170px);max-height:calc(100dvh - 170px);border-radius:8px;object-fit:contain;cursor:pointer;user-select:none;-webkit-user-drag:none;will-change:transform}
 .lb-cap{position:absolute;left:84px;right:84px;bottom:28px;text-align:center;font-size:15px}
-.lb-cap span{font:500 13px/1 var(--osd);color:var(--signal);margin-right:12px}
-.lb-btn{position:absolute;width:52px;height:52px;border-radius:50%;border:0;background:rgba(255,255,255,.1);color:#fff;cursor:pointer;display:grid;place-items:center}
-.lb-btn:hover{background:rgba(255,255,255,.22)}
+.lb-cap #lbCh{font:500 13px/1 var(--osd);color:var(--signal);margin-right:12px}
+.lb-cap #lbCap{color:#fff;font-size:15px;line-height:1.4}
+.lb-cap em{font-style:normal;color:var(--on-night-2);margin-left:12px;font-size:14px;white-space:nowrap}
+.lb-hint{display:none;position:absolute;left:0;right:0;top:24px;text-align:center;font-size:14px;color:var(--on-night-2);pointer-events:none;transition:opacity .4s}
+.lb-hint.gone{opacity:0}
+@media (hover:none){.lb-hint{display:block}}
+body.lb-open{overflow:hidden}
+.lb-btn{position:absolute;width:56px;height:56px;border-radius:50%;border:1.5px solid rgba(255,255,255,.4);background:rgba(15,29,41,.75);color:#fff;cursor:pointer;display:grid;place-items:center}
+.lb-btn:hover{background:rgba(15,29,41,.95);border-color:var(--signal)}
 .lb-btn svg{width:22px;height:22px}
 .lb-x{top:16px;right:16px}
-.lb-prev{left:16px;top:50%;margin-top:-26px}
-.lb-next{right:16px;top:50%;margin-top:-26px}
+.lb-prev{left:20px;top:50%;margin-top:-28px}
+.lb-next{right:20px;top:50%;margin-top:-28px}
 
 /* responsive */
 @media (max-width:1080px){
@@ -291,10 +297,11 @@ dialog.lb::backdrop{background:rgba(6,12,17,.95)}
   .map .hub{font-size:24px}
   .map .minor{display:none}
   .foot .wrap{grid-template-columns:1fr}
-  .lb-in{padding:60px 8px 120px}
-  .lb-cap{left:16px;right:16px;bottom:80px}
-  .lb-prev,.lb-next{top:auto;bottom:16px;margin-top:0}
-  .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
+  .lb-in{padding:64px 0 128px}
+  .lb-in img{max-height:calc(100dvh - 200px);border-radius:0}
+  .lb-cap{left:16px;right:16px;bottom:84px}
+  .lb-prev,.lb-next{top:auto;bottom:18px;margin-top:0}
+  .lb-prev{left:calc(50% - 70px)}.lb-next{right:calc(50% - 70px)}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -453,26 +460,30 @@ dialog.lb::backdrop{background:rgba(6,12,17,.95)}
 <section class="sec dark works" id="works"><div class="wrap">
   <div class="sec-head">
     <h2>Наши работы</h2>
-    <p class="lead">Реальные объекты наших инженеров, без стоковых картинок. Нажмите на кадр, чтобы открыть его крупно.</p>
+    <p class="lead">Реальные объекты наших инженеров, без стоковых картинок. Нажмите на кадр, чтобы открыть его крупно, и листайте смахиванием.</p>
   </div>
   <div class="filters" role="group" aria-label="Фильтр работ">
-    <button aria-pressed="true" data-f="all">Все<sup>10</sup></button>
-    <button aria-pressed="false" data-f="cam">Камеры<sup>4</sup></button>
-    <button aria-pressed="false" data-f="door">Домофоны<sup>5</sup></button>
-    <button aria-pressed="false" data-f="net">Сети<sup>1</sup></button>
+    <button aria-pressed="true" data-f="all">Все<sup>14</sup></button>
+    <button aria-pressed="false" data-f="cam">Камеры<sup>5</sup></button>
+    <button aria-pressed="false" data-f="door">Домофоны<sup>7</sup></button>
+    <button aria-pressed="false" data-f="net">Сети<sup>2</sup></button>
   </div>
-  <div class="nvr-bar" aria-hidden="true"><span class="live"><i class="rec-dot"></i><span id="chCount">10 каналов</span></span><span>STVTRADE NVR</span></div>
+  <div class="nvr-bar" aria-hidden="true"><span class="live"><i class="rec-dot"></i><span id="chCount">14 каналов</span></span><span>STVTRADE NVR</span></div>
   <div class="grid" id="grid">
-    <button class="tile" data-t="cam"><img src="img/works/w10-s.jpg" alt="" loading="lazy"><span class="ch">CH 01</span><span class="cap"><small>Камеры</small>Две камеры и прожекторы на опоре: контроль въезда днём и ночью</span></button>
-    <button class="tile" data-t="cam"><img src="img/works/w02-s.jpg" alt="" loading="lazy"><span class="ch">CH 02</span><span class="cap"><small>Камеры</small>Уличная камера HiWatch на монтажной коробке</span></button>
-    <button class="tile wide" data-t="net"><img src="img/works/w07-s.jpg" alt="" loading="lazy"><span class="ch">CH 03</span><span class="cap"><small>Сети</small>Шкаф: коммутатор, регистратор, питание — кабели уложены</span></button>
-    <button class="tile" data-t="door"><img src="img/works/w01-s.jpg" alt="" loading="lazy"><span class="ch">CH 04</span><span class="cap"><small>Домофоны</small>Вызывная панель Dahua в фасаде с подсветкой</span></button>
-    <button class="tile" data-t="door"><img src="img/works/w06-s.jpg" alt="" loading="lazy"><span class="ch">CH 05</span><span class="cap"><small>Домофоны</small>Монитор видеодомофона Dahua в интерьере</span></button>
-    <button class="tile wide" data-t="door"><img src="img/works/w08-s.jpg" alt="" loading="lazy"><span class="ch">CH 06</span><span class="cap"><small>Домофоны</small>Вызывная панель Dahua с козырьком у ворот частного дома</span></button>
-    <button class="tile" data-t="cam"><img src="img/works/w03-s.jpg" alt="" loading="lazy"><span class="ch">CH 07</span><span class="cap"><small>Камеры</small>Кабель спрятан в коробку, снаружи ничего не висит</span></button>
-    <button class="tile" data-t="door"><img src="img/works/w04-s.jpg" alt="" loading="lazy"><span class="ch">CH 08</span><span class="cap"><small>Домофоны</small>Вызывная панель EZVIZ с козырьком от дождя</span></button>
-    <button class="tile" data-t="door"><img src="img/works/w05-s.jpg" alt="" loading="lazy"><span class="ch">CH 09</span><span class="cap"><small>Домофоны</small>Вызывная панель HiWatch на столбе калитки</span></button>
-    <button class="tile" data-t="cam"><img src="img/works/w09-s.jpg" alt="" loading="lazy"><span class="ch">CH 10</span><span class="cap"><small>Камеры</small>Камера под карнизом: обзор угла участка</span></button>
+    <button class="tile wide" data-t="cam"><img src="img/works/w13-s.jpg" alt="" loading="lazy"><span class="ch">CH 01</span><span class="cap"><small>Камеры</small>Четыре камеры Dahua на опоре: обзор территории и парковки</span></button>
+    <button class="tile" data-t="cam"><img src="img/works/w10-s.jpg" alt="" loading="lazy"><span class="ch">CH 02</span><span class="cap"><small>Камеры</small>Две камеры и прожекторы на опоре: контроль въезда днём и ночью</span></button>
+    <button class="tile" data-t="cam"><img src="img/works/w02-s.jpg" alt="" loading="lazy"><span class="ch">CH 03</span><span class="cap"><small>Камеры</small>Уличная камера HiWatch на монтажной коробке</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w12-s.jpg" alt="" loading="lazy"><span class="ch">CH 04</span><span class="cap"><small>Домофоны</small>Вызывная панель HiWatch с козырьком на кирпичном столбе</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w01-s.jpg" alt="" loading="lazy"><span class="ch">CH 05</span><span class="cap"><small>Домофоны</small>Вызывная панель Dahua в фасаде с подсветкой</span></button>
+    <button class="tile wide" data-t="net"><img src="img/works/w07-s.jpg" alt="" loading="lazy"><span class="ch">CH 06</span><span class="cap"><small>Сети</small>Шкаф: коммутатор, регистратор, питание — кабели уложены</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w14-s.jpg" alt="" loading="lazy"><span class="ch">CH 07</span><span class="cap"><small>Домофоны</small>Вызывная панель Dahua со считывателем карт</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w06-s.jpg" alt="" loading="lazy"><span class="ch">CH 08</span><span class="cap"><small>Домофоны</small>Монитор видеодомофона Dahua в интерьере</span></button>
+    <button class="tile" data-t="net"><img src="img/works/w11-s.jpg" alt="" loading="lazy"><span class="ch">CH 09</span><span class="cap"><small>Сети</small>Шкаф: регистратор Dahua, коммутаторы, ИБП APC</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w08-s.jpg" alt="" loading="lazy"><span class="ch">CH 10</span><span class="cap"><small>Домофоны</small>Вызывная панель Dahua с козырьком у ворот частного дома</span></button>
+    <button class="tile" data-t="cam"><img src="img/works/w03-s.jpg" alt="" loading="lazy"><span class="ch">CH 11</span><span class="cap"><small>Камеры</small>Кабель спрятан в коробку, снаружи ничего не висит</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w04-s.jpg" alt="" loading="lazy"><span class="ch">CH 12</span><span class="cap"><small>Домофоны</small>Вызывная панель EZVIZ с козырьком от дождя</span></button>
+    <button class="tile" data-t="door"><img src="img/works/w05-s.jpg" alt="" loading="lazy"><span class="ch">CH 13</span><span class="cap"><small>Домофоны</small>Вызывная панель HiWatch на столбе калитки</span></button>
+    <button class="tile" data-t="cam"><img src="img/works/w09-s.jpg" alt="" loading="lazy"><span class="ch">CH 14</span><span class="cap"><small>Камеры</small>Камера под карнизом: обзор угла участка</span></button>
   </div>
 </div></section>
 
@@ -578,7 +589,8 @@ dialog.lb::backdrop{background:rgba(6,12,17,.95)}
 <dialog class="lb" id="lb" aria-label="Фото объекта">
   <div class="lb-in">
     <img id="lbImg" alt="">
-    <p class="lb-cap"><span id="lbCh"></span><span id="lbCap"></span></p>
+    <p class="lb-cap"><span id="lbCh"></span><span id="lbCap"></span><em id="lbCount"></em></p>
+    <p class="lb-hint">Смахните влево или вправо</p>
     <button class="lb-btn lb-x" id="lbX" aria-label="Закрыть"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <button class="lb-btn lb-prev" id="lbP" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="lb-btn lb-next" id="lbN" aria-label="Следующее фото"><svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" fill="none"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -624,19 +636,62 @@ dialog.lb::backdrop{background:rgba(6,12,17,.95)}
     cnt.textContent=n+' '+word(n);
   });});
 
-  /* lightbox */
+  /* lightbox with swipe */
   tiles.forEach(function(t){var c=t.querySelector('.cap').lastChild.textContent.trim();t.querySelector('img').alt=c;t.setAttribute('aria-label','Открыть фото: '+c);});
-  var lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCh=document.getElementById('lbCh'),at=0;
+  var lb=document.getElementById('lb'),lbIn=lb.querySelector('.lb-in'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCh=document.getElementById('lbCh'),lbCount=document.getElementById('lbCount'),hint=lb.querySelector('.lb-hint'),at=null,busy=false;
   function visible(){return tiles.filter(function(t){return !t.hidden;});}
-  function show(t){var img=t.querySelector('img');lbImg.src=img.src.replace('-s.jpg','.jpg');lbImg.alt=img.alt;lbCap.textContent=img.alt;lbCh.textContent=t.querySelector('.ch').textContent;at=t;}
+  function full(t){return t.querySelector('img').src.replace('-s.jpg','.jpg');}
+  function show(t){
+    var v=visible(),i=v.indexOf(t),img=t.querySelector('img');
+    lbImg.src=full(t);lbImg.alt=img.alt;lbCap.textContent=img.alt;lbCh.textContent=t.querySelector('.ch').textContent;lbCount.textContent=(i+1)+' / '+v.length;at=t;
+    [1,-1].forEach(function(d){var n=v[(i+d+v.length)%v.length];if(n){var p=new Image();p.src=full(n);}});
+  }
   function step(d){var v=visible(),i=v.indexOf(at);show(v[(i+d+v.length)%v.length]);}
-  tiles.forEach(function(t){t.addEventListener('click',function(){show(t);if(lb.showModal)lb.showModal();else lb.setAttribute('open','');});});
+  function reset(anim){lbImg.style.transition=anim?'transform .22s ease-out, opacity .22s':'none';lbImg.style.transform='';lbImg.style.opacity='';}
+  function slide(d){
+    if(busy)return;
+    if(hint)hint.classList.add('gone');
+    if(reduce){step(d);reset(false);return;}
+    busy=true;
+    lbImg.style.transition='transform .16s ease-in, opacity .16s';lbImg.style.transform='translateX('+(d>0?-35:35)+'%)';lbImg.style.opacity='0';
+    setTimeout(function(){
+      step(d);lbImg.style.transition='none';lbImg.style.transform='translateX('+(d>0?35:-35)+'%)';
+      void lbImg.offsetWidth;reset(true);setTimeout(function(){busy=false;},220);
+    },160);
+  }
+  function open(t){show(t);reset(false);if(lb.showModal)lb.showModal();else lb.setAttribute('open','');document.body.classList.add('lb-open');}
+  tiles.forEach(function(t){t.addEventListener('click',function(){open(t);});});
+  lb.addEventListener('close',function(){document.body.classList.remove('lb-open');if(at)at.focus();});
   document.getElementById('lbX').onclick=function(){lb.close();};
-  document.getElementById('lbP').onclick=function(){step(-1);};
-  document.getElementById('lbN').onclick=function(){step(1);};
-  lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('lb-in'))lb.close();});
-  lb.addEventListener('close',function(){if(at)at.focus();});
-  document.addEventListener('keydown',function(e){if(!lb.open)return;if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  document.getElementById('lbP').onclick=function(){slide(-1);};
+  document.getElementById('lbN').onclick=function(){slide(1);};
+  /* tap on the left/right half of the photo */
+  var moved=false;
+  lbImg.addEventListener('click',function(e){if(moved){moved=false;return;}var r=lbImg.getBoundingClientRect();slide(e.clientX<r.left+r.width/2?-1:1);});
+  lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbIn)lb.close();});
+  document.addEventListener('keydown',function(e){if(!lb.open)return;if(e.key==='ArrowLeft')slide(-1);if(e.key==='ArrowRight')slide(1);});
+  /* swipe: left/right to change photo, down to close */
+  var sx=0,sy=0,dx=0,dy=0,touching=false,axis='';
+  lbIn.addEventListener('touchstart',function(e){if(e.touches.length!==1||busy)return;touching=true;axis='';sx=e.touches[0].clientX;sy=e.touches[0].clientY;dx=dy=0;lbImg.style.transition='none';},{passive:true});
+  lbIn.addEventListener('touchmove',function(e){
+    if(!touching)return;dx=e.touches[0].clientX-sx;dy=e.touches[0].clientY-sy;
+    if(!axis&&(Math.abs(dx)>8||Math.abs(dy)>8))axis=Math.abs(dx)>Math.abs(dy)?'x':'y';
+    if(axis==='x'){lbImg.style.transform='translateX('+dx+'px)';}
+    else if(axis==='y'&&dy>0){lbImg.style.transform='translateY('+dy+'px)';lbImg.style.opacity=Math.max(.35,1-dy/500);}
+  },{passive:true});
+  lbIn.addEventListener('touchend',function(){
+    if(!touching)return;touching=false;
+    if(axis)moved=true;
+    if(axis==='x'&&Math.abs(dx)>50){slide(dx<0?1:-1);}
+    else if(axis==='y'&&dy>110){lb.close();reset(false);}
+    else{reset(true);}
+    setTimeout(function(){moved=false;},350);
+  });
+
+  /* swipe on hero feed switches cameras */
+  var fx=0,fy=0;
+  feed.addEventListener('touchstart',function(e){fx=e.touches[0].clientX;fy=e.touches[0].clientY;},{passive:true});
+  feed.addEventListener('touchend',function(e){var t=e.changedTouches[0],ddx=t.clientX-fx,ddy=t.clientY-fy;if(Math.abs(ddx)>50&&Math.abs(ddx)>Math.abs(ddy)*1.5){clearInterval(timer);timer=null;setCh((cur+(ddx<0?1:-1)+imgs.length)%imgs.length);}},{passive:true});
 })();
 </script>
 </body>
