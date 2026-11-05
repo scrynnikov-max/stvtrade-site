@@ -230,6 +230,9 @@ p{margin:0}
 .foot nav{display:flex;flex-wrap:wrap;gap:8px 24px}
 .foot nav a{text-decoration:none}
 .foot nav a:hover{color:var(--on-night)}
+.foot .legal{grid-column:1/-1;margin:0;padding-top:20px;border-top:1px solid var(--night-line);display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px}
+.foot .legal a{color:var(--on-night-2);text-underline-offset:3px}
+.foot .legal a:hover{color:var(--on-night)}
 
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;color:#fff}
@@ -584,6 +587,7 @@ body.lb-open{overflow:hidden}
   </a>
   <div>ИП Скрынникова Татьяна Владимировна<br>ИНН 072197944450, ОГРНИП 316237500066465<br>Документооборот: Контур.Диадок</div>
   <nav aria-label="Разделы сайта"><a href="#services">Услуги</a><a href="#works">Наши работы</a><a href="#process">Как работаем</a><a href="#geo">География</a><a href="#contacts">Контакты</a></nav>
+  <p class="legal"><a href="politika.html">Политика обработки персональных данных</a><a href="#" data-cookie-settings>Настройки cookie</a></p>
 </div></footer>
 
 <dialog class="lb" id="lb" aria-label="Фото объекта">
@@ -694,5 +698,6 @@ body.lb-open{overflow:hidden}
   feed.addEventListener('touchend',function(e){var t=e.changedTouches[0],ddx=t.clientX-fx,ddy=t.clientY-fy;if(Math.abs(ddx)>50&&Math.abs(ddx)>Math.abs(ddy)*1.5){clearInterval(timer);timer=null;setCh((cur+(ddx<0?1:-1)+imgs.length)%imgs.length);}},{passive:true});
 })();
 </script>
+<script src="js/consent.js" defer></script>
 </body>
 </html>
