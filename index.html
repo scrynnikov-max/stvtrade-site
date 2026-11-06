@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>STVTRADE — видеонаблюдение и домофоны под ключ на Юге России</title>
-<meta name="description" content="Монтаж, настройка и обслуживание видеонаблюдения, видеодомофонов и сетей для бизнеса и частных домов. Краснодарский край, Ростовская область, Ставропольский край, Адыгея. Trassir, Dahua, Hikvision, HiWatch. Заявки 24/7, гарантия 12 месяцев.">
+<meta name="description" content="Монтаж, настройка и обслуживание видеонаблюдения, видеодомофонов и сетей для бизнеса и частных домов. Краснодарский край, Ростовская область, Ставропольский край, Адыгея. Trassir, Dahua, Hikvision, HiWatch. Монтаж камеры от 2 500 ₽. Заявки 24/7.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stvtrade.ru/">
 <meta property="og:title" content="STVTRADE — видеонаблюдение и домофоны под ключ">
@@ -14,6 +14,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%230F1D29%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%2710.5%27 fill=%27none%27 stroke=%27%23F5B800%27 stroke-width=%273%27/%3E%3Ccircle cx=%2720%27 cy=%2720%27 r=%274.5%27 fill=%27%23F5B800%27/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/fsxc-cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/works/w13.jpg" as="image" fetchpriority="high">
 <style>
 @font-face{font-family:"FSXC";font-weight:500;font-display:swap;src:url(fonts/fsxc-cyrillic-600.woff2) format("woff2");unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:"FSXC";font-weight:500;font-display:swap;src:url(fonts/fsxc-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
@@ -29,202 +30,238 @@
 @font-face{font-family:"JetBrains Mono";font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
 
 :root{
-  --night:#0F1D29;
-  --night-2:#16293A;
-  --night-3:#1E3447;
-  --night-line:#2B4255;
-  --on-night:#E8EDF1;
-  --on-night-2:#9DB0C0;
-  --paper:#F3F4F1;
-  --paper-2:#E6E9E3;
-  --ink:#122230;
-  --ink-2:#4B5966;
-  --line:#CFD5CD;
-  --signal:#F5B800;
-  --signal-hi:#FFC926;
-  --rec:#E5484D;
+  --night:#0F1D29;--night-0:#09121A;--night-2:#16293A;--night-3:#1E3447;--night-line:#2B4255;
+  --on-night:#E8EDF1;--on-night-2:#9DB0C0;
+  --paper:#F3F4F1;--paper-2:#E6E9E3;--ink:#122230;--ink-2:#4B5966;--line:#CFD5CD;
+  --signal:#F5B800;--signal-hi:#FFC926;--rec:#E5484D;
   --display:"FSXC","Arial Narrow",system-ui,sans-serif;
   --text:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --osd:"JetBrains Mono",ui-monospace,Menlo,monospace;
-  --wrap:1240px;
-  --gut:clamp(16px,4vw,48px);
+  --wrap:1320px;--gut:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{display:block;max-width:100%}
 a{color:inherit}
 button{font:inherit;color:inherit}
+p{margin:0}
 :focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:6px}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
 h1,h2,h3{font-family:var(--display);font-weight:700;margin:0;letter-spacing:0}
-h2{font-size:clamp(40px,5.4vw,76px);line-height:.98}
-h3{font-size:26px;line-height:1.1;letter-spacing:.005em}
-p{margin:0}
-.lead{font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:var(--ink-2);max-width:56ch}
+h2{font-size:clamp(44px,6vw,88px);line-height:.94}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.6;color:var(--ink-2);max-width:54ch}
 .dark{background:var(--night);color:var(--on-night)}
 .dark .lead{color:var(--on-night-2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border-radius:14px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.osd-t{font:500 13px/1 var(--osd);letter-spacing:.04em}
+.rec-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--rec);animation:blink 1.6s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 28px;border-radius:14px;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .2s}
 .btn svg{width:18px;height:18px;flex:none}
 .btn-signal{background:var(--signal);color:var(--night)}
 .btn-signal:hover{background:var(--signal-hi)}
-.btn-line{border:1.5px solid rgba(232,237,241,.35);color:var(--on-night)}
-.btn-line:hover{border-color:var(--on-night)}
-.sec{padding:clamp(72px,9vw,128px) 0}
-.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.btn-line{border:1.5px solid rgba(232,237,241,.4);color:#fff;background:rgba(9,18,26,.25);backdrop-filter:blur(6px)}
+.btn-line:hover{border-color:#fff}
+.sec{padding:clamp(80px,10vw,152px) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:40px;align-items:end;margin-bottom:clamp(40px,5vw,72px)}
 
 /* header */
-.top{position:sticky;top:0;z-index:30;background:rgba(15,29,41,.92);backdrop-filter:blur(12px);color:var(--on-night);border-bottom:1px solid rgba(43,66,85,.7)}
-.top .wrap{display:flex;align-items:center;gap:32px;height:72px;max-width:none}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:27px;letter-spacing:.05em;line-height:1}
-.logo small{display:block;font-family:var(--text);font-weight:500;letter-spacing:0;font-size:12px;color:var(--on-night-2);margin-top:2px}
-.nav{display:flex;gap:28px;margin-left:auto}
-.nav a{text-decoration:none;color:var(--on-night-2);font-size:15px;font-weight:500}
-.nav a:hover{color:var(--on-night)}
-.top .tel{display:flex;flex-direction:column;align-items:flex-end;text-decoration:none;line-height:1.2}
-.top .tel b{font-family:var(--display);font-weight:500;font-size:21px;letter-spacing:.02em}
+.top{position:fixed;inset:0 0 auto;z-index:40;color:var(--on-night);border-bottom:1px solid transparent;background:linear-gradient(rgba(9,18,26,.6),rgba(9,18,26,0));transition:background-color .3s,border-color .3s}
+.top.solid{background:rgba(15,29,41,.92);backdrop-filter:blur(12px);border-bottom-color:rgba(43,66,85,.7)}
+.top .wrap{display:flex;align-items:center;gap:32px;height:76px;max-width:none}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:.05em;line-height:1}
+.logo small{display:block;font-family:var(--text);font-weight:500;letter-spacing:0;font-size:12px;color:var(--on-night-2);margin-top:3px}
+.nav{display:flex;gap:30px;margin-left:auto}
+.nav a{text-decoration:none;color:rgba(232,237,241,.75);font-size:15px;font-weight:500}
+.nav a:hover{color:#fff}
+.top .tel{display:flex;flex-direction:column;align-items:flex-end;text-decoration:none;line-height:1.15}
+.top .tel b{font-family:var(--display);font-weight:500;font-size:22px;letter-spacing:.02em}
 .top .tel span{font-size:12px;color:var(--on-night-2)}
-.top .btn{min-height:44px;padding:0 18px;font-size:15px;border-radius:12px}
+.top .btn{min-height:46px;padding:0 18px;font-size:15px;border-radius:12px}
 
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:calc(100svh - 72px);max-height:960px}
-.hero-text{display:flex;flex-direction:column;justify-content:center;padding:56px clamp(24px,4vw,64px) 48px var(--gut);padding-left:max(var(--gut),calc((100vw - var(--wrap))/2 + var(--gut)))}
-.hero h1{font-size:clamp(52px,min(6.4vw,9.6vh),104px);line-height:.92;max-width:9ch}
-.hero .lead{margin:24px 0 28px;max-width:44ch}
+/* hero: full-bleed camera feed */
+.hero{position:relative;height:100vh;height:100svh;min-height:680px;max-height:1080px;overflow:hidden;background:var(--night-0);color:#fff;isolation:isolate}
+.feed{position:absolute;inset:0;z-index:0;filter:blur(18px) brightness(.5);transform:scale(1.06);transition:filter 1.5s var(--ease) .1s,transform 1.8s var(--ease) .1s}
+.ready .feed{filter:none;transform:none}
+.pan{position:absolute;inset:-6%;animation:ptz 24s ease-in-out infinite alternate}
+@keyframes ptz{from{transform:translate3d(-2.4%,1.2%,0) scale(1.02)}to{transform:translate3d(2.4%,-1.4%,0) scale(1.09)}}
+.ch-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.ch-img.on{opacity:1}
+.shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:
+  linear-gradient(90deg,rgba(9,18,26,.9) 0%,rgba(9,18,26,.62) 34%,rgba(9,18,26,.12) 64%,rgba(9,18,26,0) 80%),
+  linear-gradient(0deg,rgba(9,18,26,.92) 0%,rgba(9,18,26,0) 48%),
+  linear-gradient(180deg,rgba(9,18,26,.55) 0%,rgba(9,18,26,0) 24%)}
+.noise{position:absolute;inset:-50%;z-index:2;pointer-events:none;opacity:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero.switching .noise{animation:static .34s steps(4) 1}
+@keyframes static{0%{opacity:.55;transform:translate(0,0)}25%{opacity:.42;transform:translate(-8%,4%)}50%{opacity:.5;transform:translate(6%,-6%)}75%{opacity:.25;transform:translate(-4%,8%)}100%{opacity:0}}
+.scan{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.07;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.osd{position:absolute;z-index:4;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.7);opacity:0;transition:opacity .5s ease 1.2s}
+.ready .osd{opacity:1}
+.osd.tl{top:100px;left:var(--gut)}
+.osd.tr{top:100px;right:var(--gut);display:flex;align-items:center;gap:8px}
+.osd.mid{top:118px;left:var(--gut);color:rgba(255,255,255,.7)}
+.frame{position:absolute;z-index:3;inset:150px var(--gut) 28px;pointer-events:none}
+.frame i{position:absolute;width:44px;height:44px;border:2px solid rgba(255,255,255,.85);opacity:0;transition:transform 1.1s var(--ease) .35s,opacity .4s ease .35s}
+.frame i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0;transform:translate(18vw,14vh)}
+.frame i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0;transform:translate(-18vw,14vh)}
+.frame i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0;transform:translate(18vw,-14vh)}
+.frame i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0;transform:translate(-18vw,-14vh)}
+.ready .frame i{opacity:1;transform:none}
+.hero-in{position:absolute;z-index:5;left:0;right:0;bottom:clamp(56px,8vh,96px)}
+.hero-in .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:end;max-width:none;padding:0 calc(var(--gut) + 28px)}
+.hero h1{font-size:clamp(52px,min(6.6vw,11vh),118px);line-height:.9}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.04em}
+.hero h1 .ln>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.12s}
+.ready .hero h1 .ln>span{transform:none;transition-delay:.55s}
+.ready .hero h1 .ln:nth-child(2)>span{transition-delay:.67s}
+.hero .lead{color:rgba(232,237,241,.85);margin:26px 0 30px;max-width:50ch}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px}
-.facts{list-style:none;margin:32px 0 0;padding:24px 0 0;border-top:1px solid var(--night-line);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.facts b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(30px,2.6vw,38px);line-height:1;color:#fff;white-space:nowrap}
-.facts span{display:block;font-size:14px;line-height:1.35;color:var(--on-night-2);margin-top:6px}
-
-.feed{position:relative;overflow:hidden;background:#09121A;isolation:isolate}
-.feed .ch-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
-.feed .ch-img.on{opacity:1}
-.feed::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(9,18,26,.45) 0%,rgba(9,18,26,0) 22%,rgba(9,18,26,0) 62%,rgba(9,18,26,.75) 100%)}
-.noise{position:absolute;inset:-50%;z-index:3;pointer-events:none;opacity:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.feed.switching .noise{animation:static .32s steps(4) 1}
-@keyframes static{0%{opacity:.55;transform:translate(0,0)}25%{opacity:.4;transform:translate(-8%,4%)}50%{opacity:.5;transform:translate(6%,-6%)}75%{opacity:.25;transform:translate(-4%,8%)}100%{opacity:0}}
-.osd{position:absolute;z-index:4;font:500 13px/1 var(--osd);color:#fff;letter-spacing:.03em;text-shadow:0 1px 3px rgba(0,0,0,.7)}
-.osd.tl{top:24px;left:28px}
-.osd.tr{top:24px;right:28px;display:flex;align-items:center;gap:8px}
-.osd.bl{bottom:112px;left:28px}
-.rec-dot{width:10px;height:10px;border-radius:50%;background:var(--rec);animation:blink 1.6s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.frame{position:absolute;z-index:4;inset:56px 28px 140px;pointer-events:none}
-.frame i{position:absolute;width:40px;height:40px;border:2px solid rgba(255,255,255,.8)}
-.frame i:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
-.frame i:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
-.frame i:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
-.frame i:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
-.chs{position:absolute;z-index:5;left:28px;right:28px;bottom:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.chs button{position:relative;height:64px;padding:0;border:1.5px solid rgba(255,255,255,.25);border-radius:8px;overflow:hidden;background:#09121A;cursor:pointer}
-.chs button img{width:100%;height:100%;object-fit:cover;opacity:.55;transition:opacity .2s}
-.chs button span{position:absolute;left:8px;bottom:6px;font:500 11px/1 var(--osd);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}
+.hero .say{margin-top:18px;font-size:15px;color:rgba(232,237,241,.75)}
+.hero .say a{color:#fff;text-underline-offset:3px}
+.hero .say a:hover{color:var(--signal)}
+.hero-copy{opacity:0;transform:translateY(16px);transition:opacity .8s ease .95s,transform .8s var(--ease) .95s}
+.ready .hero-copy{opacity:1;transform:none}
+.chs{display:grid;grid-template-columns:repeat(4,112px);gap:8px;opacity:0;transition:opacity .6s ease 1.3s}
+.ready .chs{opacity:1}
+.chs button{position:relative;height:70px;padding:0;border:1.5px solid rgba(255,255,255,.28);border-radius:8px;overflow:hidden;background:var(--night-0);cursor:pointer}
+.chs button img{width:100%;height:100%;object-fit:cover;opacity:.5;transition:opacity .2s}
+.chs button span{position:absolute;left:8px;bottom:7px;font:500 11px/1 var(--osd);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}
 .chs button:hover img{opacity:.85}
 .chs button[aria-pressed="true"]{border-color:var(--signal)}
 .chs button[aria-pressed="true"] img{opacity:1}
+.chs .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--signal)}
+.chs button[aria-pressed="true"] .bar{animation:fill 7s linear forwards}
+.chs.manual .bar{animation:none!important;width:100%}
+@keyframes fill{to{width:100%}}
 
-/* services */
-.svc-big{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.svc-card{background:#fff;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line)}
-.svc-card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--paper-2)}
-.svc-card .ph img{width:100%;height:100%;object-fit:cover}
-.svc-card .body{padding:26px 26px 30px}
-.svc-card h3{font-size:32px;margin-bottom:10px}
-.svc-card p{color:var(--ink-2)}
-.svc-card ul{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
-.svc-card li{position:relative;padding-left:26px;font-size:16px;line-height:1.45}
-.svc-card li::before{content:"";position:absolute;left:2px;top:.42em;width:12px;height:7px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-45deg)}
-.after{margin-top:20px;background:var(--night);color:var(--on-night);border-radius:20px;padding:clamp(28px,4vw,44px);display:grid;grid-template-columns:minmax(0,1fr) repeat(3,minmax(0,1fr));gap:clamp(24px,3vw,44px);align-items:start}
-.after h3{font-size:clamp(30px,3vw,42px);line-height:1}
-.after .item svg{width:32px;height:32px;color:var(--signal);margin-bottom:14px}
-.after .item b{display:block;font-size:17px;margin-bottom:6px}
-.after .item p{color:var(--on-night-2);font-size:15px;line-height:1.5}
+/* facts strip */
+.facts{background:var(--night);color:var(--on-night);border-bottom:1px solid var(--night-line)}
+.facts ul{list-style:none;margin:0 auto;padding:0 var(--gut);max-width:var(--wrap);display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts li{padding:34px 28px 36px;border-left:1px solid var(--night-line)}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts b{display:block;font-family:var(--display);font-weight:700;font-size:clamp(40px,4vw,60px);line-height:.95;color:#fff;white-space:nowrap}
+.facts span{display:block;margin-top:8px;color:var(--on-night-2);font-size:15px;line-height:1.4}
 
-/* why */
-.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
-.why-photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5}
-.why-photo img{width:100%;height:100%;object-fit:cover}
-.why-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(15,29,41,.86);backdrop-filter:blur(6px);color:var(--on-night);border-radius:14px;padding:16px 18px;font-size:15px;line-height:1.45}
-.why-photo figcaption b{color:var(--signal);font-weight:600}
-.why h2{margin-bottom:36px}
-.why dl{margin:0;display:grid;gap:0}
-.why dl div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;padding:22px 0;border-top:1px solid var(--line)}
-.why dl div:last-child{border-bottom:1px solid var(--line)}
-.why dt{font-family:var(--display);font-weight:500;font-size:25px;line-height:1.1}
-.why dd{margin:0;color:var(--ink-2);font-size:16px;line-height:1.55}
+/* services: sticky monitor */
+.svc{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,96px)}
+.chap{min-height:72vh;display:flex;flex-direction:column;justify-content:center;padding:48px 0;border-top:1px solid var(--line)}
+.chap:first-child{border-top:0;padding-top:0;min-height:62vh;justify-content:flex-start}
+.chap .tag{color:var(--ink-2);display:flex;align-items:center;gap:10px}
+.chap .tag i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:background-color .3s}
+.chap.on .tag i{background:var(--rec)}
+.chap h3{font-size:clamp(44px,4.8vw,72px);line-height:.92;margin:14px 0 20px}
+.chap p{color:var(--ink-2);font-size:18px;max-width:46ch}
+.chap ul{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px;max-width:46ch}
+.chap li{position:relative;padding-left:30px;font-size:17px;line-height:1.45}
+.chap li::before{content:"";position:absolute;left:2px;top:.4em;width:13px;height:7px;border-left:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);transform:rotate(-45deg)}
+.price{display:inline-flex;align-items:baseline;gap:10px;margin-top:28px;padding:12px 18px;border-radius:14px;background:var(--signal);color:var(--night);font-weight:600;font-size:16px;align-self:flex-start}
+.price b{font-family:var(--display);font-weight:700;font-size:30px;line-height:1}
+.m-img{display:none}
+.stage{position:sticky;top:100px;height:calc(100vh - 136px);min-height:480px;max-height:820px;border-radius:24px;overflow:hidden;background:var(--night-0);color:#fff}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.05);transition:opacity .3s ease,transform 1.4s var(--ease)}
+.stage .noise{z-index:1}
+.stage.switching .noise{animation:static .34s steps(4) 1}
+.stage img.on{opacity:1;transform:none}
+.stage::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,18,26,.5) 0%,rgba(9,18,26,0) 22%,rgba(9,18,26,0) 72%,rgba(9,18,26,.6) 100%);pointer-events:none}
+.stage .s-osd{position:absolute;z-index:2;top:22px;left:24px;right:24px;display:flex;justify-content:space-between;align-items:center;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.stage .s-osd span:last-child{display:flex;align-items:center;gap:8px}
+.stage .s-cap{position:absolute;z-index:2;left:24px;right:24px;bottom:22px;font-size:15px;line-height:1.4;color:rgba(255,255,255,.9)}
+.stage .frame{inset:64px 24px 64px;z-index:2}
+.stage .frame i{opacity:1;transform:none;width:36px;height:36px}
 
 /* works */
-.works .sec-head{margin-bottom:28px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.filters button{border:1.5px solid var(--night-line);background:transparent;color:var(--on-night-2);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:500;cursor:pointer}
+.works .sec-head{margin-bottom:32px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.filters button{border:1.5px solid var(--night-line);background:transparent;color:var(--on-night-2);border-radius:999px;padding:10px 18px;font-size:15px;font-weight:500;cursor:pointer}
 .filters button:hover{color:var(--on-night);border-color:var(--on-night-2)}
 .filters button[aria-pressed="true"]{background:var(--on-night);border-color:var(--on-night);color:var(--night)}
 .filters sup{font-size:11px;margin-left:4px;vertical-align:super;opacity:.7}
-.nvr-bar{display:flex;justify-content:space-between;align-items:center;font:500 12px/1 var(--osd);color:var(--on-night-2);padding:12px 2px;border-top:1px solid var(--night-line);margin-bottom:10px}
+.nvr-bar{display:flex;justify-content:space-between;align-items:center;color:var(--on-night-2);padding:12px 2px;border-top:1px solid var(--night-line);margin-bottom:10px}
 .nvr-bar .live{display:flex;align-items:center;gap:8px;color:var(--on-night)}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-flow:dense;gap:10px}
-.tile{position:relative;margin:0;padding:0;border:0;border-radius:10px;overflow:hidden;cursor:zoom-in;aspect-ratio:3/4;background:var(--night-2);text-align:left}
+.tile{position:relative;margin:0;padding:0;border:0;border-radius:12px;overflow:hidden;cursor:zoom-in;aspect-ratio:3/4;background:var(--night-2);text-align:left}
 .tile.wide{grid-column:span 2;aspect-ratio:auto}
 .tile[hidden]{display:none}
-.tile img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-.tile:hover img{transform:scale(1.04)}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.tile:hover img{transform:scale(1.045)}
 .tile .ch{position:absolute;top:12px;left:14px;font:500 12px/1 var(--osd);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}
-.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:48px 16px 14px;background:linear-gradient(transparent,rgba(9,18,26,.9));color:#fff;font-size:15px;line-height:1.35}
+.tile .cap{position:absolute;left:0;right:0;bottom:0;padding:56px 16px 14px;background:linear-gradient(transparent,rgba(9,18,26,.92));color:#fff;font-size:15px;line-height:1.35}
 .tile .cap small{display:block;font-size:12px;color:var(--signal);font-weight:600;margin-bottom:4px}
 
-/* steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,36px);counter-reset:s;position:relative}
-.steps li{counter-increment:s;position:relative;padding-top:72px}
-.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:48px;height:48px;border-radius:50%;background:var(--night);color:var(--signal);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:24px;z-index:1}
-.steps li::after{content:"";position:absolute;top:23px;left:56px;right:-28px;height:2px;background:repeating-linear-gradient(90deg,var(--ink) 0 8px,transparent 8px 14px);opacity:.35}
-.steps li:last-child::after{display:none}
-.steps h3{margin-bottom:10px}
+/* manifesto */
+.mani{font-family:var(--display);font-weight:700;font-size:clamp(48px,7.4vw,124px);line-height:.92;margin:0 0 clamp(48px,6vw,96px)}
+.mani span{display:block}
+.mani em{font-style:normal;color:var(--ink-2)}
+.why{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.why-photo{position:relative;margin:0;border-radius:24px;overflow:hidden;aspect-ratio:4/5}
+.why-photo img{width:100%;height:100%;object-fit:cover}
+.why-photo figcaption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(15,29,41,.86);backdrop-filter:blur(6px);color:var(--on-night);border-radius:14px;padding:16px 18px;font-size:15px;line-height:1.45}
+.why-photo figcaption b{color:var(--signal);font-weight:600}
+.why dl{margin:0}
+.why dl div{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px;padding:26px 0;border-top:1px solid var(--line)}
+.why dl div:last-child{border-bottom:1px solid var(--line)}
+.why dt{font-family:var(--display);font-weight:700;font-size:28px;line-height:1.05}
+.why dd{margin:0;color:var(--ink-2);font-size:17px;line-height:1.55}
+
+/* process */
+.steps-box{position:relative}
+.proc{background:var(--paper-2)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,3vw,40px);counter-reset:s;position:relative}
+.track{position:absolute;top:27px;left:28px;right:28px;height:2px;background:rgba(18,34,48,.15)}
+.track i{display:block;height:100%;width:0;background:var(--ink)}
+.steps li{counter-increment:s;position:relative;padding-top:84px}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:56px;height:56px;border-radius:50%;background:var(--night);color:var(--signal);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:28px;z-index:1;transition:background-color .3s,color .3s}
+.steps li.done::before{background:var(--signal);color:var(--night)}
+.steps h3{font-size:30px;line-height:1;margin-bottom:12px}
 .steps p{color:var(--ink-2);font-size:16px}
 
 /* geo */
-.geo-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:center}
-.regions{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:0}
-.regions li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)}
+.geo-wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.regions{list-style:none;margin:40px 0 0;padding:0}
+.regions li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:baseline;padding:20px 0;border-top:1px solid var(--line)}
 .regions li:last-child{border-bottom:1px solid var(--line)}
-.regions b{font-family:var(--display);font-weight:500;font-size:26px;line-height:1.1}
-.regions span{display:block;color:var(--ink-2);font-size:15px;margin-top:4px}
-.regions em{font-style:normal;font-size:13px;font-weight:600;color:var(--ink);background:var(--signal);border-radius:999px;padding:4px 10px;white-space:nowrap}
-.map{background:var(--night);border-radius:22px;padding:clamp(16px,2.4vw,28px);position:relative}
+.regions b{font-family:var(--display);font-weight:700;font-size:30px;line-height:1}
+.regions span{display:block;color:var(--ink-2);font-size:15px;margin-top:6px}
+.regions em{font-style:normal;font-size:13px;font-weight:600;color:var(--night);background:var(--signal);border-radius:999px;padding:5px 11px;white-space:nowrap}
+.map{background:var(--night);border-radius:24px;padding:clamp(16px,2.4vw,28px);position:relative;overflow:hidden}
 .map svg{width:100%;height:auto;display:block}
-.map .legend{position:absolute;left:24px;bottom:20px;display:flex;gap:18px;font-size:13px;color:var(--on-night-2)}
+.map .route{stroke-dasharray:420;stroke-dashoffset:420;transition:stroke-dashoffset 1.6s var(--ease)}
+.map.drawn .route{stroke-dashoffset:0}
+.map .route:nth-child(2){transition-delay:.15s}.map .route:nth-child(3){transition-delay:.3s}.map .route:nth-child(4){transition-delay:.45s}.map .route:nth-child(5){transition-delay:.6s}.map .route:nth-child(6){transition-delay:.75s}
+.map .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.5}100%{transform:scale(2.4);opacity:0}}
+.map .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--on-night-2);margin-top:8px}
 .map .legend span{display:flex;align-items:center;gap:8px}
 .map .legend i{width:10px;height:10px;border-radius:50%;background:var(--signal)}
 .map .legend i.s{background:var(--on-night-2);width:6px;height:6px}
-.brands{margin-top:clamp(56px,7vw,96px);display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 44px;padding-top:28px;border-top:1px solid var(--line)}
+.brands{margin-top:clamp(64px,8vw,112px);display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 52px;padding-top:28px;border-top:1px solid var(--line)}
 .brands p{flex-basis:100%;font-size:15px;color:var(--ink-2);margin-bottom:6px}
-.brands span{font-family:var(--display);font-weight:500;font-size:clamp(30px,3.4vw,46px);color:var(--ink)}
+.brands span{font-family:var(--display);font-weight:700;font-size:clamp(34px,4vw,56px);line-height:1;color:var(--ink)}
 
 /* contacts */
 .contact{position:relative;overflow:hidden}
 .contact-bg{position:absolute;inset:0;z-index:0}
-.contact-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 40%;opacity:.28}
-.contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 30%,rgba(15,29,41,.6) 100%)}
-.contact .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
-.contact .lead{margin-top:22px}
-.contact .btn{margin-top:32px}
-.phones{display:grid;gap:0;background:rgba(22,41,58,.75);backdrop-filter:blur(8px);border:1px solid var(--night-line);border-radius:22px;padding:clamp(24px,3vw,36px)}
-.person{padding:18px 0;border-bottom:1px solid var(--night-line)}
-.person:last-child{border-bottom:0}
+.contact-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 40%;opacity:.3}
+.contact-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 28%,rgba(15,29,41,.55) 100%)}
+.contact .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.contact .lead{margin-top:24px}
+.contact .btn{margin-top:34px}
+.phones{background:rgba(22,41,58,.78);backdrop-filter:blur(8px);border:1px solid var(--night-line);border-radius:24px;padding:clamp(24px,3vw,40px)}
+.person{padding:20px 0;border-bottom:1px solid var(--night-line)}
+.person:first-child{padding-top:0}
+.person:last-child{border-bottom:0;padding-bottom:0}
 .person small{display:block;font-size:14px;color:var(--on-night-2);margin-bottom:6px}
-.person .num{display:inline-block;text-decoration:none;font-family:var(--display);font-weight:700;font-size:clamp(34px,3.8vw,52px);line-height:1;letter-spacing:.01em}
+.person .num{display:inline-block;text-decoration:none;font-family:var(--display);font-weight:700;font-size:clamp(38px,4.2vw,60px);line-height:1;letter-spacing:.01em}
 .person .num:hover{color:var(--signal)}
 .msg{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.msg a,.msg button{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px;border-radius:10px;border:1.5px solid var(--night-line);background:rgba(15,29,41,.5);color:var(--on-night);font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;transition:border-color .2s}
+.msg a,.msg button{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 15px;border-radius:11px;border:1.5px solid var(--night-line);background:rgba(15,29,41,.5);color:var(--on-night);font-size:15px;font-weight:500;text-decoration:none;cursor:pointer;transition:border-color .2s}
 .msg a:hover,.msg button:hover{border-color:var(--signal)}
 .msg svg{width:18px;height:18px;flex:none}
-.hero-msg{margin-top:16px;font-size:15px;color:var(--on-night-2);max-width:48ch}
-.hero-msg a{color:var(--on-night);text-underline-offset:3px}
-.hero-msg a:hover{color:var(--signal)}
-.price{display:inline-flex;align-items:baseline;gap:8px;margin-top:22px;padding:10px 14px;border-radius:12px;background:var(--signal);color:var(--night);font-weight:600;font-size:15px}
-.price b{font-family:var(--display);font-weight:700;font-size:24px;line-height:1}
 
 /* footer */
-.foot{background:var(--night);color:var(--on-night-2);border-top:1px solid var(--night-line);font-size:14px;line-height:1.6;padding:36px 0 44px}
+.foot{background:var(--night);color:var(--on-night-2);border-top:1px solid var(--night-line);font-size:14px;line-height:1.6;padding:40px 0 48px}
 .foot .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:24px 48px;align-items:start}
 .foot .logo{color:var(--on-night)}
 .foot nav{display:flex;flex-wrap:wrap;gap:8px 24px}
@@ -237,9 +274,9 @@ p{margin:0}
 /* lightbox */
 dialog.lb{border:0;padding:0;background:transparent;width:100vw;height:100vh;max-width:none;max-height:none;margin:0;color:#fff}
 dialog.lb::backdrop{background:rgba(6,12,17,.97)}
-.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:64px 92px 92px;touch-action:none;overflow:hidden}
+.lb-in{position:relative;width:100%;height:100%;display:grid;place-items:center;padding:64px 96px 96px;touch-action:none;overflow:hidden}
 .lb-in img{max-width:100%;max-height:calc(100vh - 170px);max-height:calc(100dvh - 170px);border-radius:8px;object-fit:contain;cursor:pointer;user-select:none;-webkit-user-drag:none;will-change:transform}
-.lb-cap{position:absolute;left:84px;right:84px;bottom:28px;text-align:center;font-size:15px}
+.lb-cap{position:absolute;left:96px;right:96px;bottom:30px;text-align:center}
 .lb-cap #lbCh{font:500 13px/1 var(--osd);color:var(--signal);margin-right:12px}
 .lb-cap #lbCap{color:#fff;font-size:15px;line-height:1.4}
 .lb-cap em{font-style:normal;color:var(--on-night-2);margin-left:12px;font-size:14px;white-space:nowrap}
@@ -255,48 +292,62 @@ body.lb-open{overflow:hidden}
 .lb-next{right:20px;top:50%;margin-top:-28px}
 
 /* responsive */
-@media (max-width:1080px){
+@media (max-width:1180px){
   .nav{display:none}
-  .hero{grid-template-columns:minmax(0,1fr);max-height:none;min-height:0}
-  .hero-text{padding:48px var(--gut) 40px}
-  .feed{aspect-ratio:4/5;max-height:760px}
-  .svc-big{grid-template-columns:1fr 1fr}
-  .svc-big .svc-card:last-child{grid-column:span 2;flex-direction:row}
-  .svc-big .svc-card:last-child .ph{aspect-ratio:auto;flex:0 0 48%}
-  .after{grid-template-columns:1fr 1fr 1fr}
-  .after h3{grid-column:1/-1}
+  .chs{grid-template-columns:repeat(4,88px)}
+  .chs button{height:58px}
+}
+@media (max-width:980px){
+  .hero{max-height:none}
+  .hero-in .wrap{grid-template-columns:minmax(0,1fr);gap:24px;padding:0 var(--gut)}
+  .chs{order:-1;grid-template-columns:repeat(4,minmax(0,1fr))}
+  .frame{inset:120px var(--gut) 20px}
+  .osd.tl,.osd.tr{top:88px}
+  .osd.mid{display:none}
+  .facts ul{grid-template-columns:1fr 1fr}
+  .facts li:nth-child(3){border-left:0;padding-left:0}
+  .facts li:nth-child(n+3){border-top:1px solid var(--night-line)}
+  .sec-head{grid-template-columns:1fr;gap:18px}
+  .svc{grid-template-columns:1fr}
+  .stage{display:none}
+  .chap,.chap:first-child{min-height:0;padding:40px 0;justify-content:flex-start}
+  .chap:first-child{padding-top:0}
+  .m-img{display:block;border-radius:18px;overflow:hidden;aspect-ratio:4/3;margin-bottom:24px;background:var(--paper-2)}
+  .m-img img{width:100%;height:100%;object-fit:cover}
   .why,.geo-wrap,.contact .wrap{grid-template-columns:1fr}
   .why-photo{aspect-ratio:16/11}
-  .steps{grid-template-columns:1fr 1fr;row-gap:44px}
-  .steps li:nth-child(2)::after{display:none}
+  .steps{grid-template-columns:1fr 1fr;row-gap:48px}
+  .track{display:none}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 }
 @media (max-width:720px){
   body{font-size:16px}
-  .top .wrap{height:64px;gap:12px}
-  .top .tel{display:none}
   html{scroll-padding-top:68px}
-  .sec-head{grid-template-columns:1fr;gap:16px}
-  .facts{grid-template-columns:1fr 1fr;row-gap:22px}
+  .top .wrap{height:64px;gap:12px}
+  .logo{font-size:24px}
+  .top .tel{display:none}
+  .top .btn{margin-left:auto}
+  .hero{min-height:620px}
+  .hero h1{font-size:clamp(46px,13.4vw,72px)}
+  .hero .lead{margin:18px 0 22px;font-size:16px}
   .hero .cta .btn{flex:1 1 100%}
-  .hero h1{font-size:clamp(44px,13vw,64px)}
-  h2{font-size:clamp(36px,10.5vw,52px)}
-  .chs{left:16px;right:16px;bottom:16px;gap:6px}
-  .chs button{height:52px}
-  .osd.tl,.osd.tr{top:16px}.osd.tl{left:16px}.osd.tr{right:16px}
-  .osd.bl{left:16px;bottom:84px}
-  .frame{inset:44px 16px 104px}
+  .hero-in{bottom:28px}
+  .osd.tl,.osd.tr{top:78px}
+  .frame{inset:104px 12px 12px}
   .frame i{width:28px;height:28px}
-  .svc-big{grid-template-columns:1fr}
-  .svc-big .svc-card:last-child{grid-column:auto;flex-direction:column}
-  .svc-big .svc-card:last-child .ph{aspect-ratio:4/3}
-  .after{grid-template-columns:1fr}
+  .hero .frame i:nth-child(3),.hero .frame i:nth-child(4){display:none}
+  .regions li{grid-template-columns:1fr;gap:10px}
+  .regions em{justify-self:start}
+  .chs{gap:6px}
+  .chs button{height:48px}
+  .shade{background:linear-gradient(0deg,rgba(9,18,26,.95) 0%,rgba(9,18,26,.78) 46%,rgba(9,18,26,.2) 78%,rgba(9,18,26,.5) 100%)}
+  .facts li{padding:24px 14px 26px}
+  .facts b{font-size:42px}
   .why dl div{grid-template-columns:1fr;gap:6px}
   .grid{grid-template-columns:1fr 1fr;gap:8px}
   .tile.wide{aspect-ratio:3/2}
-  .tile .cap{font-size:13px;padding:36px 10px 10px}
+  .tile .cap{font-size:13px;padding:40px 10px 10px}
   .steps{grid-template-columns:1fr}
-  .steps li::after{display:none}
-  .map .legend{position:static;margin-top:12px;flex-wrap:wrap}
   .map .hub{font-size:24px}
   .map .minor{display:none}
   .foot .wrap{grid-template-columns:1fr}
@@ -308,72 +359,72 @@ body.lb-open{overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .rec-dot{animation:none}
-  .feed.switching .noise{animation:none}
-  .feed .ch-img,.tile img{transition:none}
+  .pan,.rec-dot,.map .pulse{animation:none}
+  .feed,.frame i,.hero h1 .ln>span,.hero-copy,.chs,.osd,.stage img,.tile img,.map .route,.ch-img{transition:none}
+  .hero.switching .noise,.stage.switching .noise{animation:none}
+  .chs button[aria-pressed="true"] .bar{animation:none;width:100%}
 }
 </style>
 </head>
 <body>
 
-<header class="top"><div class="wrap">
+<header class="top" id="top-bar"><div class="wrap">
   <a class="logo" href="#top">
-    <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#16293A"/><circle cx="20" cy="20" r="10.5" fill="none" stroke="#F5B800" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#F5B800"/></svg>
+    <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#16293A"/><circle cx="20" cy="20" r="10.5" fill="none" stroke="#F5B800" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#F5B800"/></svg>
     <span>STVTRADE<small>системы безопасности</small></span>
   </a>
   <nav class="nav" aria-label="Разделы сайта">
-    <a href="#services">Услуги</a>
-    <a href="#works">Наши работы</a>
-    <a href="#process">Как работаем</a>
-    <a href="#geo">География</a>
-    <a href="#contacts">Контакты</a>
+    <a href="#services">Услуги</a><a href="#works">Наши работы</a><a href="#process">Как работаем</a><a href="#geo">География</a><a href="#contacts">Контакты</a>
   </nav>
   <a class="tel" href="tel:+79186499694"><b>+7 918 649-96-94</b><span>заявки 24/7</span></a>
-  <a class="btn btn-signal" href="tel:+79186499694" aria-label="Позвонить: +7 918 649-96-94">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-    Позвонить
-  </a>
+  <a class="btn btn-signal" href="tel:+79186499694" aria-label="Позвонить: +7 918 649-96-94"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить</a>
 </div></header>
 
 <main id="top">
 
-<section class="hero dark" aria-label="STVTRADE">
-  <div class="hero-text">
-    <h1>Камеры, домофоны и&nbsp;сети под&nbsp;ключ</h1>
-    <p class="lead">Монтаж и обслуживание видеонаблюдения для бизнеса и частных домов в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее.</p>
-    <div class="cta">
-      <a class="btn btn-signal" href="tel:+79186499694">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-        Позвонить инженеру
-      </a>
-      <a class="btn btn-line" href="#works">Смотреть наши работы</a>
+<section class="hero" id="hero" aria-label="STVTRADE">
+  <div class="feed" aria-hidden="true">
+    <div class="pan">
+      <img class="ch-img on" src="img/works/w13.jpg" alt="" style="object-position:50% 40%">
+      <img class="ch-img" src="img/works/w10.jpg" alt="" style="object-position:50% 30%" loading="lazy">
+      <img class="ch-img" src="img/works/w07.jpg" alt="" loading="lazy">
+      <img class="ch-img" src="img/works/w08.jpg" alt="" style="object-position:30% 50%" loading="lazy">
     </div>
-    <p class="hero-msg">Удобнее написать? <a href="https://t.me/+79186499694" target="_blank" rel="noopener">Telegram</a>, <a href="https://wa.me/79186499694" target="_blank" rel="noopener">WhatsApp</a> или Max по номеру +7&nbsp;918&nbsp;649-96-94</p>
-    <ul class="facts">
-      <li><b>10 лет</b><span>опыта на объектах</span></li>
-      <li><b>24/7</b><span>приём заявок</span></li>
-      <li><b>12 мес.</b><span>гарантия на работы</span></li>
-      <li><b>4 региона</b><span>свои инженеры на месте</span></li>
-    </ul>
   </div>
+  <div class="shade"></div><div class="scan"></div><i class="noise" aria-hidden="true"></i>
+  <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <span class="osd tl osd-t" id="osdName" aria-hidden="true">CAM 01  ОПОРА, ПАРКОВКА</span>
+  <span class="osd tr osd-t" aria-hidden="true"><i class="rec-dot"></i>REC</span>
+  <span class="osd mid osd-t" id="clock" aria-hidden="true">--.--.---- --:--:--</span>
 
-  <div class="feed" id="feed" aria-label="Фото наших объектов в виде экрана видеорегистратора">
-    <img class="ch-img on" src="img/works/w10.jpg" alt="Две уличные камеры и прожекторы на бетонной опоре" style="object-position:50% 38%" fetchpriority="high">
-    <img class="ch-img" src="img/works/w02.jpg" alt="Уличная камера HiWatch на монтажной коробке" loading="lazy" style="object-position:50% 45%">
-    <img class="ch-img" src="img/works/w07.jpg" alt="Телекоммуникационный шкаф с коммутатором и регистратором" loading="lazy">
-    <img class="ch-img" src="img/works/w01.jpg" alt="Вызывная панель Dahua на фасаде вечером" loading="lazy" style="object-position:50% 40%">
-    <i class="noise" aria-hidden="true"></i>
-    <span class="osd tl" id="osdName">CAM 01  ОПОРА, ВЪЕЗД</span>
-    <span class="osd tr"><i class="rec-dot" aria-hidden="true"></i>REC</span>
-    <span class="osd bl" id="clock" aria-hidden="true">--.--.---- --:--:--</span>
-    <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-    <div class="chs" role="group" aria-label="Переключить камеру">
-      <button aria-pressed="true" data-ch="0" data-name="CAM 01  ОПОРА, ВЪЕЗД"><img src="img/works/w10-s.jpg" alt=""><span>CAM 01</span></button>
-      <button aria-pressed="false" data-ch="1" data-name="CAM 02  ФАСАД"><img src="img/works/w02-s.jpg" alt=""><span>CAM 02</span></button>
-      <button aria-pressed="false" data-ch="2" data-name="CAM 03  СЕРВЕРНАЯ"><img src="img/works/w07-s.jpg" alt=""><span>CAM 03</span></button>
-      <button aria-pressed="false" data-ch="3" data-name="CAM 04  ВХОД"><img src="img/works/w01-s.jpg" alt=""><span>CAM 04</span></button>
+  <div class="hero-in"><div class="wrap">
+    <div>
+      <h1><span class="ln"><span>Камеры, домофоны</span></span><span class="ln"><span>и&nbsp;сети под&nbsp;ключ</span></span></h1>
+      <div class="hero-copy">
+        <p class="lead">Монтаж и обслуживание видеонаблюдения для бизнеса и частных домов в Краснодарском крае, Ростовской области, Ставропольском крае и Адыгее.</p>
+        <div class="cta">
+          <a class="btn btn-signal" href="tel:+79186499694"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить инженеру</a>
+          <a class="btn btn-line" href="#works">Смотреть наши работы</a>
+        </div>
+        <p class="say">Удобнее написать? <a href="https://t.me/+79186499694" target="_blank" rel="noopener">Telegram</a>, <a href="https://wa.me/79186499694" target="_blank" rel="noopener">WhatsApp</a> или Max по номеру +7&nbsp;918&nbsp;649-96-94</p>
+      </div>
     </div>
-  </div>
+    <div class="chs" role="group" aria-label="Переключить камеру">
+      <button aria-pressed="true" data-name="CAM 01  ОПОРА, ПАРКОВКА"><img src="img/works/w13-s.jpg" alt=""><span>CAM 01</span><i class="bar"></i></button>
+      <button aria-pressed="false" data-name="CAM 02  ОПОРА, ВЪЕЗД"><img src="img/works/w10-s.jpg" alt=""><span>CAM 02</span><i class="bar"></i></button>
+      <button aria-pressed="false" data-name="CAM 03  СЕРВЕРНАЯ"><img src="img/works/w07-s.jpg" alt=""><span>CAM 03</span><i class="bar"></i></button>
+      <button aria-pressed="false" data-name="CAM 04  ВХОД"><img src="img/works/w08-s.jpg" alt=""><span>CAM 04</span><i class="bar"></i></button>
+    </div>
+  </div></div>
+</section>
+
+<section class="facts" aria-label="Коротко о нас">
+  <ul>
+    <li><b>10 лет</b><span>на объектах</span></li>
+    <li><b>24/7</b><span>приём заявок</span></li>
+    <li><b>12 мес.</b><span>гарантия на работы</span></li>
+    <li><b>4 региона</b><span>свои инженеры на месте</span></li>
+  </ul>
 </section>
 
 <section class="sec" id="services"><div class="wrap">
@@ -381,12 +432,13 @@ body.lb-open{overflow:hidden}
     <h2>Что делаем</h2>
     <p class="lead">Берём объект целиком: подбираем оборудование, монтируем, настраиваем и дальше обслуживаем. Один подрядчик на всю систему — не нужно искать крайнего.</p>
   </div>
-  <div class="svc-big">
-    <article class="svc-card">
-      <div class="ph"><img src="img/works/w03-s.jpg" alt="Уличная камера HiWatch на монтажной коробке, кирпичная стена" loading="lazy" style="object-position:50% 55%"></div>
-      <div class="body">
+  <div class="svc">
+    <div class="chapters">
+      <article class="chap on" data-i="0">
+        <div class="m-img"><img src="img/works/w13-s.jpg" alt="Четыре камеры Dahua на опоре" loading="lazy"></div>
+        <p class="tag osd-t"><i></i>CH 01</p>
         <h3>Видеонаблюдение</h3>
-        <p>Камеры для улицы и помещений, запись и просмотр с телефона.</p>
+        <p>Камеры для улицы и помещений, запись в архив и просмотр с телефона.</p>
         <ul>
           <li>Подбор камер под задачу и объект</li>
           <li>Монтаж на коробки, кабель скрыт</li>
@@ -394,11 +446,10 @@ body.lb-open{overflow:hidden}
           <li>Trassir, Hikvision, HiWatch, Dahua</li>
         </ul>
         <p class="price">Монтаж камеры <b>от 2&nbsp;500&nbsp;₽</b></p>
-      </div>
-    </article>
-    <article class="svc-card">
-      <div class="ph"><img src="img/works/w08-s.jpg" alt="Вызывная панель Dahua на кирпичной стене у ворот" loading="lazy"></div>
-      <div class="body">
+      </article>
+      <article class="chap" data-i="1">
+        <div class="m-img"><img src="img/works/w12-s.jpg" alt="Вызывная панель HiWatch с козырьком" loading="lazy"></div>
+        <p class="tag osd-t"><i></i>CH 02</p>
         <h3>Видеодомофоны</h3>
         <p>Вызывные панели и мониторы для частных домов и офисов.</p>
         <ul>
@@ -407,56 +458,40 @@ body.lb-open{overflow:hidden}
           <li>Связка с камерами наблюдения</li>
           <li>Dahua, HiWatch, EZVIZ</li>
         </ul>
-      </div>
-    </article>
-    <article class="svc-card">
-      <div class="ph"><img src="img/works/w07-s.jpg" alt="Шкаф с коммутатором, регистратором и питанием" loading="lazy"></div>
-      <div class="body">
+      </article>
+      <article class="chap" data-i="2">
+        <div class="m-img"><img src="img/works/w11-s.jpg" alt="Шкаф с регистратором Dahua, коммутаторами и ИБП" loading="lazy"></div>
+        <p class="tag osd-t"><i></i>CH 03</p>
         <h3>Сети и шкафы</h3>
-        <p>Основа, на которой всё работает без сбоев.</p>
+        <p>Основа, на которой система работает без сбоев.</p>
         <ul>
           <li>Шкаф, коммутатор, регистратор, ИБП</li>
           <li>Аккуратная укладка и маркировка кабеля</li>
           <li>Резервное питание на случай отключений</li>
         </ul>
-      </div>
-    </article>
-  </div>
-
-  <div class="after">
-    <h3>После монтажа не&nbsp;пропадаем</h3>
-    <div class="item">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg>
-      <b>Обслуживание по графику</b>
-      <p>Чистим и настраиваем камеры, проверяем архив, обновляем ПО.</p>
+      </article>
+      <article class="chap" data-i="3">
+        <div class="m-img"><img src="img/works/w09-s.jpg" alt="Камера под карнизом частного дома" loading="lazy"></div>
+        <p class="tag osd-t"><i></i>CH 04</p>
+        <h3>Обслуживание и&nbsp;ремонт</h3>
+        <p>После монтажа не пропадаем — следим, чтобы система писала каждый день.</p>
+        <ul>
+          <li>Регламентное ТО: чистка и настройка камер, проверка архива, обновление ПО</li>
+          <li>Аварийный выезд — заявки 24/7, подменное оборудование</li>
+          <li>Удалённая поддержка: многое решаем без выезда</li>
+        </ul>
+      </article>
     </div>
-    <div class="item">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 3L6 18h9l-2 11 12-15h-9l2-11z"/></svg>
-      <b>Аварийный выезд</b>
-      <p>Заявки 24/7. Если ремонт затягивается — ставим подменное оборудование.</p>
+    <div class="stage" aria-hidden="true">
+      <img class="on" src="img/works/w13.jpg" alt="" style="object-position:50% 40%">
+      <img src="img/works/w12.jpg" alt="" loading="lazy">
+      <img src="img/works/w11.jpg" alt="" loading="lazy">
+      <img src="img/works/w09.jpg" alt="" loading="lazy">
+      <i class="noise"></i>
+      <div class="frame"><i></i><i></i><i></i><i></i></div>
+      <p class="s-osd osd-t"><span id="stageName">CH 01  ВИДЕОНАБЛЮДЕНИЕ</span><span><i class="rec-dot"></i>REC</span></p>
+      <p class="s-cap" id="stageCap">Четыре камеры Dahua на опоре: обзор территории и парковки</p>
     </div>
-    <div class="item">
-      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="26" height="17" rx="2"/><path d="M11 27h10M16 22v5"/><path d="M10 14l4 3 8-7"/></svg>
-      <b>Удалённая поддержка</b>
-      <p>Многое решаем без выезда: настройка, доступ, запись.</p>
-    </div>
-  </div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap why">
-  <figure class="why-photo" style="margin:0">
-    <img src="img/works/w02.jpg" alt="Камера HiWatch на монтажной коробке, вид сбоку" loading="lazy" style="object-position:40% 50%">
-    <figcaption><b>Так выглядит наш монтаж.</b> Кабель уходит в коробку, снаружи ничего не болтается, крепёж под цвет.</figcaption>
-  </figure>
-  <div>
-    <h2>Почему нам доверяют объекты</h2>
-    <dl>
-      <div><dt>10 лет на объектах</dt><dd>Знаем Trassir, Dahua, Hikvision и HiWatch изнутри: от выбора камеры до восстановления архива.</dd></div>
-      <div><dt>Аккуратный монтаж</dt><dd>Кабель в коробках и кабель-каналах, всё подписано. Не стыдно показать ни владельцу, ни следующему подрядчику.</dd></div>
-      <div><dt>Цена до начала работ</dt><dd>Смету согласуем заранее и не меняем её по ходу.</dd></div>
-      <div><dt>Гарантия 12 месяцев</dt><dd>Если что-то не так по нашей вине — приедем и исправим бесплатно.</dd></div>
-      <div><dt>Работаем с бизнесом</dt><dd>Договор, акты, электронный документооборот через Контур.Диадок.</dd></div>
-    </dl>
   </div>
 </div></section>
 
@@ -471,7 +506,7 @@ body.lb-open{overflow:hidden}
     <button aria-pressed="false" data-f="door">Домофоны<sup>7</sup></button>
     <button aria-pressed="false" data-f="net">Сети<sup>2</sup></button>
   </div>
-  <div class="nvr-bar" aria-hidden="true"><span class="live"><i class="rec-dot"></i><span id="chCount">14 каналов</span></span><span>STVTRADE NVR</span></div>
+  <div class="nvr-bar osd-t" aria-hidden="true"><span class="live"><i class="rec-dot"></i><span id="chCount">14 каналов</span></span><span>STVTRADE NVR</span></div>
   <div class="grid" id="grid">
     <button class="tile wide" data-t="cam"><img src="img/works/w13-s.jpg" alt="" loading="lazy"><span class="ch">CH 01</span><span class="cap"><small>Камеры</small>Четыре камеры Dahua на опоре: обзор территории и парковки</span></button>
     <button class="tile" data-t="cam"><img src="img/works/w10-s.jpg" alt="" loading="lazy"><span class="ch">CH 02</span><span class="cap"><small>Камеры</small>Две камеры и прожекторы на опоре: контроль въезда днём и ночью</span></button>
@@ -490,20 +525,41 @@ body.lb-open{overflow:hidden}
   </div>
 </div></section>
 
-<section class="sec" id="process"><div class="wrap">
+<section class="sec"><div class="wrap">
+  <p class="mani"><span>Кабель — в&nbsp;коробке.</span><span>Камера — на&nbsp;месте.</span><span><em>Запись — в&nbsp;архиве.</em></span></p>
+  <div class="why">
+    <figure class="why-photo">
+      <img src="img/works/w03.jpg" alt="Камера HiWatch на монтажной коробке, кабель скрыт" loading="lazy" style="object-position:50% 55%">
+      <figcaption><b>Так выглядит наш монтаж.</b> Кабель уходит в коробку, снаружи ничего не болтается, крепёж под цвет.</figcaption>
+    </figure>
+    <div>
+      <h2 style="font-size:clamp(38px,4.4vw,64px);margin-bottom:32px">Почему нам доверяют объекты</h2>
+      <dl>
+        <div><dt>10 лет на объектах</dt><dd>Знаем Trassir, Dahua, Hikvision и HiWatch изнутри: от выбора камеры до восстановления архива.</dd></div>
+        <div><dt>Аккуратный монтаж</dt><dd>Кабель в коробках и кабель-каналах, всё подписано. Не стыдно показать ни владельцу, ни следующему подрядчику.</dd></div>
+        <div><dt>Цена до начала работ</dt><dd>Смету согласуем заранее и не меняем её по ходу.</dd></div>
+        <div><dt>Гарантия 12 месяцев</dt><dd>Если что-то не так по нашей вине — приедем и исправим бесплатно.</dd></div>
+        <div><dt>Работаем с бизнесом</dt><dd>Договор, акты, электронный документооборот через Контур.Диадок.</dd></div>
+      </dl>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec proc" id="process"><div class="wrap">
   <div class="sec-head">
     <h2>Как работаем</h2>
     <p class="lead">Четыре шага от звонка до работающей системы. Всё, что сделали, закрываем актом.</p>
   </div>
-  <ol class="steps">
-    <li><h3>Заявка</h3><p>Звоните или пишите на почту. Уточним задачу и договоримся о выезде.</p></li>
+  <div class="steps-box"><div class="track" aria-hidden="true"><i id="trackFill"></i></div>
+  <ol class="steps" id="steps">
+    <li><h3>Заявка</h3><p>Звоните или пишите в мессенджер. Уточним задачу и договоримся о выезде.</p></li>
     <li><h3>Выезд и смета</h3><p>Смотрим объект, подбираем оборудование, согласуем стоимость и сроки.</p></li>
     <li><h3>Монтаж и настройка</h3><p>Ставим, настраиваем запись и доступ с телефона, показываем, как пользоваться.</p></li>
     <li><h3>Гарантия и сервис</h3><p>12 месяцев гарантии. Дальше — обслуживание по графику или по заявке.</p></li>
-  </ol>
+  </ol></div>
 </div></section>
 
-<section class="sec" id="geo" style="background:var(--paper-2)"><div class="wrap">
+<section class="sec" id="geo"><div class="wrap">
   <div class="geo-wrap">
     <div>
       <h2>Где работаем</h2>
@@ -515,41 +571,18 @@ body.lb-open{overflow:hidden}
         <li><div><b>Республика Адыгея</b><span>Майкоп и республика</span></div><em>инженер в Адыгее</em></li>
       </ul>
     </div>
-    <div class="map">
+    <div class="map" id="map">
       <svg viewBox="0 0 600 556" role="img" aria-labelledby="mapT">
         <title id="mapT">Карта городов, где работает STVTRADE: Краснодарский край, Ростовская область, Ставропольский край, Республика Адыгея</title>
         <defs><pattern id="gr" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#2B4255" stroke-width="1"/></pattern></defs>
         <rect width="600" height="556" fill="url(#gr)" opacity=".55"/>
-        <g class="minor" font-family="Golos Text, sans-serif" font-style="italic" font-size="14" fill="#5E7486">
-          <text x="30" y="508">Чёрное море</text>
-          <text x="56" y="184">Азовское море</text>
-        </g>
-        <g stroke="#F5B800" stroke-width="1.2" stroke-dasharray="3 5" opacity=".55" fill="none">
-          <path d="M193 355L253 102M193 355L435 354M193 355L284 404M193 355L253 523M193 355L95 391M435 354L524 469"/>
-        </g>
-        <g fill="#9DB0C0">
-          <circle cx="58" cy="371" r="3.5"/><circle cx="367" cy="359" r="3.5"/><circle cx="120" cy="410" r="3.5"/><circle cx="201" cy="464" r="3.5"/><circle cx="63" cy="328" r="3.5"/>
-          <circle cx="189" cy="103" r="3.5"/><circle cx="293" cy="45" r="3.5"/><circle cx="284" cy="80" r="3.5"/><circle cx="255" cy="114" r="3"/><circle cx="268" cy="94" r="3"/><circle cx="451" cy="68" r="3.5"/>
-          <circle cx="508" cy="474" r="3"/><circle cx="532" cy="449" r="3"/><circle cx="433" cy="402" r="3.5"/>
-        </g>
-        <g fill="#F5B800">
-          <circle cx="193" cy="355" r="18" opacity=".18"/><circle cx="193" cy="355" r="7"/>
-          <circle cx="253" cy="102" r="18" opacity=".18"/><circle cx="253" cy="102" r="7"/>
-          <circle cx="284" cy="404" r="14" opacity=".18"/><circle cx="284" cy="404" r="6"/>
-          <circle cx="435" cy="354" r="14" opacity=".18"/><circle cx="435" cy="354" r="6"/><circle cx="524" cy="469" r="6"/><circle cx="253" cy="523" r="6"/><circle cx="95" cy="391" r="6"/>
-        </g>
-        <g class="hub" font-family="Golos Text, sans-serif" font-size="15" font-weight="600" fill="#E8EDF1">
-          <text x="206" y="345">Краснодар</text>
-          <text x="266" y="98">Ростов-на-Дону</text>
-          <text x="296" y="424">Майкоп</text>
-          <text x="447" y="348">Ставрополь</text>
-          <text x="420" y="500">Кавминводы</text>
-          <text x="266" y="528">Сочи</text>
-          <text x="20" y="420">Новороссийск</text>
-        </g>
-        <g class="minor" font-family="Golos Text, sans-serif" font-size="12" fill="#9DB0C0">
-          <text x="140" y="118">Таганрог</text><text x="303" y="48">Шахты</text><text x="463" y="72">Волгодонск</text><text x="377" y="363">Армавир</text><text x="70" y="364">Анапа</text><text x="211" y="469">Туапсе</text>
-        </g>
+        <g class="minor" font-family="Golos Text, sans-serif" font-style="italic" font-size="14" fill="#5E7486"><text x="30" y="508">Чёрное море</text><text x="56" y="184">Азовское море</text></g>
+        <g fill="none" stroke="#F5B800" stroke-width="1.6" stroke-dasharray="0" opacity=".7"><path class="route" d="M193 355L253 102"/><path class="route" d="M193 355L435 354"/><path class="route" d="M193 355L284 404"/><path class="route" d="M193 355L253 523"/><path class="route" d="M193 355L95 391"/><path class="route" d="M435 354L524 469"/></g>
+        <g fill="#9DB0C0"><circle cx="58" cy="371" r="3.5"/><circle cx="367" cy="359" r="3.5"/><circle cx="120" cy="410" r="3.5"/><circle cx="201" cy="464" r="3.5"/><circle cx="63" cy="328" r="3.5"/><circle cx="189" cy="103" r="3.5"/><circle cx="293" cy="45" r="3.5"/><circle cx="284" cy="80" r="3.5"/><circle cx="255" cy="114" r="3"/><circle cx="268" cy="94" r="3"/><circle cx="451" cy="68" r="3.5"/><circle cx="508" cy="474" r="3"/><circle cx="532" cy="449" r="3"/><circle cx="433" cy="402" r="3.5"/></g>
+        <g fill="#F5B800" opacity=".55"><circle class="pulse" cx="193" cy="355" r="10"/><circle class="pulse" cx="253" cy="102" r="10"/><circle class="pulse" cx="284" cy="404" r="10"/><circle class="pulse" cx="435" cy="354" r="10"/></g>
+        <g fill="#F5B800"><circle cx="193" cy="355" r="8"/><circle cx="253" cy="102" r="8"/><circle cx="284" cy="404" r="8"/><circle cx="435" cy="354" r="8"/><circle cx="524" cy="469" r="6"/><circle cx="253" cy="523" r="6"/><circle cx="95" cy="391" r="6"/></g>
+        <g class="hub" font-family="Golos Text, sans-serif" font-size="15" font-weight="600" fill="#E8EDF1"><text x="208" y="345">Краснодар</text><text x="268" y="98">Ростов-на-Дону</text><text x="298" y="424">Майкоп</text><text x="449" y="348">Ставрополь</text><text x="420" y="500">Кавминводы</text><text x="266" y="528">Сочи</text><text x="20" y="420">Новороссийск</text></g>
+        <g class="minor" font-family="Golos Text, sans-serif" font-size="12" fill="#9DB0C0"><text x="140" y="118">Таганрог</text><text x="303" y="48">Шахты</text><text x="463" y="72">Волгодонск</text><text x="377" y="363">Армавир</text><text x="70" y="364">Анапа</text><text x="211" y="469">Туапсе</text></g>
       </svg>
       <div class="legend"><span><i></i>наши инженеры и основные города</span><span><i class="s"></i>выезжаем</span></div>
     </div>
@@ -566,10 +599,7 @@ body.lb-open{overflow:hidden}
     <div>
       <h2>Расскажите, что нужно защитить</h2>
       <p class="lead">Позвоните или напишите в Telegram, WhatsApp или Max — обсудим задачу, приедем на объект и посчитаем стоимость. Если система уже стоит и что-то не работает, тоже пишите: разберёмся.</p>
-      <a class="btn btn-signal" href="tel:+79186499694">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
-        Позвонить сейчас
-      </a>
+      <a class="btn btn-signal" href="tel:+79186499694"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Позвонить сейчас</a>
     </div>
     <div class="phones">
       <div class="person"><small>Максим, ответственный инженер</small><a class="num" href="tel:+79186499694">+7 918 649-96-94</a><div class="msg" aria-label="Написать Максиму"><a href="https://t.me/+79186499694" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.4-1.5zM8.6 13.4l9.8-6.2c.5-.3.9-.1.5.2l-8.1 7.3-.3 3.4-1.9-4.7z"/></svg>Telegram</a><a href="https://wa.me/79186499694" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a><button type="button" data-copy="+79186499694" aria-label="Скопировать номер для Max"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="6"/><path d="M8 15V9l4 4 4-4v6"/></svg><span>Max</span></button></div></div>
@@ -581,10 +611,7 @@ body.lb-open{overflow:hidden}
 </main>
 
 <footer class="foot"><div class="wrap">
-  <a class="logo" href="#top">
-    <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#16293A"/><circle cx="20" cy="20" r="10.5" fill="none" stroke="#F5B800" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#F5B800"/></svg>
-    STVTRADE
-  </a>
+  <a class="logo" href="#top"><svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#16293A"/><circle cx="20" cy="20" r="10.5" fill="none" stroke="#F5B800" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#F5B800"/></svg>STVTRADE</a>
   <div>ИП Скрынникова Татьяна Владимировна<br>ИНН 072197944450, ОГРНИП 316237500066465<br>Документооборот: Контур.Диадок</div>
   <nav aria-label="Разделы сайта"><a href="#services">Услуги</a><a href="#works">Наши работы</a><a href="#process">Как работаем</a><a href="#geo">География</a><a href="#contacts">Контакты</a></nav>
   <p class="legal"><a href="politika.html">Политика обработки персональных данных</a><a href="#" data-cookie-settings>Настройки cookie</a></p>
@@ -604,6 +631,19 @@ body.lb-open{overflow:hidden}
 <script>
 (function(){
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root=document.documentElement;
+
+  /* header turns solid after leaving the top */
+  var bar=document.getElementById('top-bar');
+  function onScrollHeader(){bar.classList.toggle('solid',window.scrollY>40);}
+  onScrollHeader();window.addEventListener('scroll',onScrollHeader,{passive:true});
+
+  /* hero load: focus pull once the first frame is ready */
+  var first=document.querySelector('.ch-img.on');
+  function ready(){document.body.classList.add('ready');}
+  if(reduce){ready();}
+  else if(first.complete){requestAnimationFrame(function(){requestAnimationFrame(ready);});}
+  else{first.addEventListener('load',ready);first.addEventListener('error',ready);setTimeout(ready,2500);}
 
   /* live OSD clock, Moscow time */
   var clock=document.getElementById('clock');
@@ -611,17 +651,56 @@ body.lb-open{overflow:hidden}
   function tick(){clock.textContent=fmt.format(new Date()).replace(',','');}
   tick();setInterval(tick,1000);
 
-  /* hero channel switcher */
-  var feed=document.getElementById('feed'),imgs=feed.querySelectorAll('.ch-img'),btns=feed.querySelectorAll('.chs button'),osd=document.getElementById('osdName'),cur=0,timer=null;
+  /* hero channels */
+  var hero=document.getElementById('hero'),imgs=hero.querySelectorAll('.ch-img'),chs=hero.querySelector('.chs'),btns=chs.querySelectorAll('button'),osd=document.getElementById('osdName'),cur=0,timer=null;
   function setCh(i){
     if(i===cur)return;
-    feed.classList.remove('switching');void feed.offsetWidth;feed.classList.add('switching');
+    hero.classList.remove('switching');void hero.offsetWidth;hero.classList.add('switching');
     imgs[cur].classList.remove('on');imgs[i].classList.add('on');
     btns[cur].setAttribute('aria-pressed','false');btns[i].setAttribute('aria-pressed','true');
     osd.textContent=btns[i].dataset.name;cur=i;
   }
-  btns.forEach(function(b,i){b.addEventListener('click',function(){clearInterval(timer);timer=null;setCh(i);});});
-  if(!reduce){timer=setInterval(function(){setCh((cur+1)%imgs.length);},6000);}
+  function manual(i){clearInterval(timer);timer=null;chs.classList.add('manual');setCh(i);}
+  btns.forEach(function(b,i){b.addEventListener('click',function(){manual(i);});});
+  if(!reduce){timer=setInterval(function(){setCh((cur+1)%imgs.length);},7000);}else{chs.classList.add('manual');}
+  var fx=0,fy=0;
+  hero.addEventListener('touchstart',function(e){fx=e.touches[0].clientX;fy=e.touches[0].clientY;},{passive:true});
+  hero.addEventListener('touchend',function(e){var t=e.changedTouches[0],dx=t.clientX-fx,dy=t.clientY-fy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){manual((cur+(dx<0?1:-1)+imgs.length)%imgs.length);}},{passive:true});
+
+  /* services: sticky monitor follows the chapter in view */
+  var chaps=[].slice.call(document.querySelectorAll('.chap')),stage=document.querySelector('.stage'),
+      sImgs=stage.querySelectorAll('img'),sName=document.getElementById('stageName'),sCap=document.getElementById('stageCap'),sCur=0,
+      names=['CH 01  ВИДЕОНАБЛЮДЕНИЕ','CH 02  ДОМОФОНЫ','CH 03  СЕТИ И ШКАФЫ','CH 04  ОБСЛУЖИВАНИЕ'],
+      caps=['Четыре камеры Dahua на опоре: обзор территории и парковки','Вызывная панель HiWatch с козырьком на кирпичном столбе','Шкаф: регистратор Dahua, коммутаторы, ИБП APC','Камера под карнизом: обзор угла участка'];
+  function setStage(i){
+    if(i===sCur)return;
+    if(!reduce){stage.classList.remove('switching');void stage.offsetWidth;stage.classList.add('switching');}
+    sImgs[sCur].classList.remove('on');sImgs[i].classList.add('on');
+    chaps[sCur].classList.remove('on');chaps[i].classList.add('on');
+    sName.textContent=names[i];sCap.textContent=caps[i];sCur=i;
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setStage(+e.target.dataset.i);});},{rootMargin:'-45% 0px -45% 0px'});
+    chaps.forEach(function(c){io.observe(c);});
+  }
+
+  /* process: track fills as the section scrolls */
+  var steps=document.getElementById('steps'),fill=document.getElementById('trackFill'),lis=steps.querySelectorAll('li');
+  function onScrollSteps(){
+    var r=steps.getBoundingClientRect(),vh=window.innerHeight;
+    var p=Math.min(1,Math.max(0,(vh*0.8-r.top)/(r.height+vh*0.3)));
+    if(reduce)p=r.top<vh?1:0;
+    fill.style.width=(p*100)+'%';
+    lis.forEach(function(li,i){li.classList.toggle('done',p>=i/(lis.length-1)-0.001&&p>0);});
+  }
+  onScrollSteps();window.addEventListener('scroll',onScrollSteps,{passive:true});window.addEventListener('resize',onScrollSteps);
+
+  /* map: draw routes once visible */
+  var map=document.getElementById('map');
+  if('IntersectionObserver' in window&&!reduce){
+    var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){map.classList.add('drawn');mo.disconnect();}});},{threshold:.35});
+    mo.observe(map);
+  }else{map.classList.add('drawn');}
 
   /* copy number for Max */
   document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
@@ -658,10 +737,7 @@ body.lb-open{overflow:hidden}
     if(reduce){step(d);reset(false);return;}
     busy=true;
     lbImg.style.transition='transform .16s ease-in, opacity .16s';lbImg.style.transform='translateX('+(d>0?-35:35)+'%)';lbImg.style.opacity='0';
-    setTimeout(function(){
-      step(d);lbImg.style.transition='none';lbImg.style.transform='translateX('+(d>0?35:-35)+'%)';
-      void lbImg.offsetWidth;reset(true);setTimeout(function(){busy=false;},220);
-    },160);
+    setTimeout(function(){step(d);lbImg.style.transition='none';lbImg.style.transform='translateX('+(d>0?35:-35)+'%)';void lbImg.offsetWidth;reset(true);setTimeout(function(){busy=false;},220);},160);
   }
   function open(t){show(t);reset(false);if(lb.showModal)lb.showModal();else lb.setAttribute('open','');document.body.classList.add('lb-open');}
   tiles.forEach(function(t){t.addEventListener('click',function(){open(t);});});
@@ -669,12 +745,10 @@ body.lb-open{overflow:hidden}
   document.getElementById('lbX').onclick=function(){lb.close();};
   document.getElementById('lbP').onclick=function(){slide(-1);};
   document.getElementById('lbN').onclick=function(){slide(1);};
-  /* tap on the left/right half of the photo */
   var moved=false;
-  lbImg.addEventListener('click',function(e){if(moved){moved=false;return;}var r=lbImg.getBoundingClientRect();slide(e.clientX<r.left+r.width/2?-1:1);});
+  lbImg.addEventListener('click',function(e){if(moved)return;var r=lbImg.getBoundingClientRect();slide(e.clientX<r.left+r.width/2?-1:1);});
   lb.addEventListener('click',function(e){if(e.target===lb||e.target===lbIn)lb.close();});
   document.addEventListener('keydown',function(e){if(!lb.open)return;if(e.key==='ArrowLeft')slide(-1);if(e.key==='ArrowRight')slide(1);});
-  /* swipe: left/right to change photo, down to close */
   var sx=0,sy=0,dx=0,dy=0,touching=false,axis='';
   lbIn.addEventListener('touchstart',function(e){if(e.touches.length!==1||busy)return;touching=true;axis='';sx=e.touches[0].clientX;sy=e.touches[0].clientY;dx=dy=0;lbImg.style.transition='none';},{passive:true});
   lbIn.addEventListener('touchmove',function(e){
@@ -691,12 +765,8 @@ body.lb-open{overflow:hidden}
     else{reset(true);}
     setTimeout(function(){moved=false;},350);
   });
-
-  /* swipe on hero feed switches cameras */
-  var fx=0,fy=0;
-  feed.addEventListener('touchstart',function(e){fx=e.touches[0].clientX;fy=e.touches[0].clientY;},{passive:true});
-  feed.addEventListener('touchend',function(e){var t=e.changedTouches[0],ddx=t.clientX-fx,ddy=t.clientY-fy;if(Math.abs(ddx)>50&&Math.abs(ddx)>Math.abs(ddy)*1.5){clearInterval(timer);timer=null;setCh((cur+(ddx<0?1:-1)+imgs.length)%imgs.length);}},{passive:true});
 })();
+
 </script>
 <script src="js/consent.js" defer></script>
 </body>
