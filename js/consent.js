@@ -49,7 +49,7 @@
     '@media (max-width:560px){.ck{left:8px;right:8px;bottom:8px;padding:16px}.ck .ck-b{width:100%}.ck button{flex:1 1 0}}'
   ].join('\n');
 
-  function policyHref() { return /politika/.test(location.pathname) ? '#top' : 'politika.html'; }
+  function docHref(n) { return location.pathname.indexOf(n) !== -1 ? '#top' : n + '.html'; }
 
   var box;
   function build() {
@@ -59,7 +59,8 @@
     box.setAttribute('role', 'region'); box.setAttribute('aria-label', 'Уведомление о cookie');
     box.innerHTML =
       '<p>Сайт использует cookie и сервис Яндекс Метрика, чтобы понимать, какие разделы полезны посетителям. ' +
-      'Подробнее — в <a href="' + policyHref() + '">политике обработки персональных данных</a>.</p>' +
+      'Нажимая «Принять», вы даёте <a href="' + docHref('soglasie') + '">согласие на обработку персональных данных</a>. ' +
+      'Подробнее — в <a href="' + docHref('politika') + '">политике</a>.</p>' +
       '<div class="ck-b"><button type="button" class="ck-no">Только необходимые</button>' +
       '<button type="button" class="ck-yes">Принять</button></div>';
     document.body.appendChild(box);
